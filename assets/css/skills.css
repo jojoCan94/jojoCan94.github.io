@@ -1,0 +1,88 @@
+/* Start skills section */
+
+/* .skills-title,
+  .skills-text,
+  .skills-paragraph {
+    margin: 0rem;
+    margin left: 0rem
+    text-align: center;
+  } */
+.presentation-image {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#skills {
+  display: flex;
+  text-align: left;
+  line-height: normal;
+  color: white;
+  margin: 1rem;
+}
+
+.skills-title h1 {
+  font-size: 56px;
+}
+
+.skills-paragraph {
+  font-size: 25px;
+  text-transform: uppercase;
+  line-height: 1.7rem;
+}
+
+.skills-explained {
+  text-align: justify;
+}
+
+/* End skills section */
+
+@media only screen and (max-width: 1399px) {
+  .skills-paragraph {
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .skills-title h1 {
+    font-size: 56px;
+  }
+
+  .skills-paragraph {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .skills-title h1 {
+    font-size: 45px;
+  }
+
+  .skills-paragraph {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .skills-title,
+  .skills-text,
+  .skills-paragraph {
+    text-align: center;
+  }
+}
+
+/* Phone */
+@media only screen and (max-width: 400px) {
+  .skills-title,
+  .skills-text,
+  .skills-paragraph {
+    margin: 0rem;
+    margin-left: 0rem;
+    text-align: center;
+  }
+}

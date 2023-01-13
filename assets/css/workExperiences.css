@@ -1,0 +1,103 @@
+:root {
+  /* spazi tra le section */
+  --small-font: 8rem;
+  /* Dimensioni del font */
+  --mega: 155px;
+  --big: 37px;
+  --medium: 30px;
+  --small: 25px;
+  --mini: 20px;
+}
+
+/* Work section */
+.work-card {
+  display: flex;
+  justify-content: center;
+  line-height: normal;
+  color: white;
+  text-align: center;
+}
+
+.work-card-syscons,
+.work-card-nexum {
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 0 1px 20px #284893;
+  width: 650px;
+}
+
+.work-card-syscons {
+  box-shadow: 0 1px 20px #f32e87;
+}
+
+.work-card h1 {
+  text-align: left;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+.work-card img {
+  width: 150px;
+}
+
+.work-logo {
+  margin: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1399px) {
+  .work-card-syscons,
+  .work-card-nexum {
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: 0 1px 20px #284893;
+    width: 550px;
+  }
+
+  .work-card-syscons {
+    box-shadow: 0 1px 20px #f32e87;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .work-card-syscons,
+  .work-card-nexum {
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: 0 1px 20px #284893;
+    width: 447px;
+  }
+
+  .work-card-syscons {
+    box-shadow: 0 1px 20px #f32e87;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .work-card-syscons,
+  .work-card-nexum {
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: 0 1px 20px #284893;
+    width: 360px;
+  }
+
+  .work-card-syscons {
+    box-shadow: 0 1px 20px #f32e87;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .work-card h1 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .work-card {
+    margin-top: var(--small-font);
+  }
+  .work-card h1 {
+    font-size: var(--big);
+  }
+}

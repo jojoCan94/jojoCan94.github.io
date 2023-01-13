@@ -1,0 +1,111 @@
+/* Education section */
+.education-card {
+  position: relative;
+  display: flex;
+  margin: 0;
+  line-height: normal;
+  color: white;
+  margin: 8rem auto 0;
+  margin-left: 2rem;
+  margin-bottom: 12rem;
+}
+
+.education-card h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.education-card img {
+  width: 150px;
+}
+
+.education-card-left {
+  display: flex;
+  justify-content: center;
+}
+
+.education-card-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.education-card-border {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 70%;
+  border-top: 2px solid hsla(0, 0%, 82.7%, 0.397);
+  margin-bottom: -100px;
+  transition: width 0.6s ease-in-out;
+}
+
+.education-card:hover .education-card-border {
+  border-top: 2px solid hsla(0, 100%, 50%, 0.356);
+  width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-link {
+    font-size: 20px;
+  }
+
+  /* Education section */
+  .education-card {
+    display: flex;
+    margin: 0;
+    line-height: normal;
+    color: white;
+    padding-left: 0;
+  }
+
+  .education-card h1 {
+    font-size: 4rem;
+  }
+
+  .education-card img {
+    width: 150px;
+  }
+
+  .unibo-logo {
+    text-align: center;
+  }
+
+  .education-card-border {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Education section */
+  .education-card,
+  .reach-out-card {
+    display: flex;
+    margin: 0;
+    line-height: normal;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .education-card h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* Education section */
+  .education-card {
+    line-height: normal;
+    text-align: center;
+  }
+
+  .education-card h1 {
+    font-size: 3rem;
+  }
+
+  .education-card-left {
+    margin-top: 2.5rem;
+  }
+}
