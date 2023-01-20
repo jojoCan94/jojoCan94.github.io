@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="/assets/css/education.css" />
   <link rel="stylesheet" href="/assets/css/workExperiences.css" />
   <link rel="stylesheet" href="/assets/css/reachMe.css" />
+  <link rel="stylesheet" href="/assets/css/backToTop.css" />
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -124,35 +125,37 @@
         </div>
         <div class="mt-4">
           <!-- first line -->
-          <ul class="d-flex justify-content-evenly p-0">
-            <p style="width:50px">
-              <img src="./assets/svg/skills-icon/html.svg" alt=""> <span>html-5</span>
+          <ul class="d-flex justify-content-around p-3">
+            <p>
+              <img src="./assets/svg/skills-icon/html.svg" width="80px" alt="html">
             </p>
-            <p style="width:50px">
-              <img src="./assets/svg/skills-icon/css.svg" alt=""> <span>css3</span>
+            <p>
+              <img src="./assets/svg/skills-icon/css.svg" width="80px" alt="css">
             </p>
-            <p style="width:60px;">
-              <img src="./assets/svg/skills-icon/js.svg" alt=""> <span>JavaScript</span>
+            <p>
+              <img src="./assets/svg/skills-icon/js.svg" width="80px" alt="js">
             </p>
-            <p style="width:66px">
-              <img src="./assets/svg/skills-icon/google.svg" alt=""> <span>html-5</span>
+            <p>
+              <img src="./assets/svg/skills-icon/google.svg" width="80px" alt="google">
             </p>
           </ul>
+          <ul class="d-flex justify-content-around p-3">
+            <p>
+              <img src="./assets/svg/skills-icon/nodejs.svg" width="80px" alt="nodejs">
+            </p>
+            <p>
+              <img src="./assets/svg/skills-icon/npm.svg" width="80px" alt="npm">
+            </p>
+            <p>
+              <img src="./assets/svg/skills-icon/python.svg" width="80px" alt="python">
+            </p>
+            <p>
+              <img src="./assets/svg/skills-icon/react.svg" width="80px" alt="react">
+            </p>
+          </ul>
+
           <!-- second line -->
-          <ul class="d-flex justify-content-evenly p-0">
-            <p style="width:50px">
-              <img src="./assets/svg/skills-icon/nodejs.svg" alt=""> <span>nodejs</span>
-            </p>
-            <p style="width:50px">
-              <img src="./assets/svg/skills-icon/npm.svg" alt=""> <span>npm</span>
-            </p>
-            <p style="width:50px">
-              <img src="./assets/svg/skills-icon/python.svg" alt=""> <span>python</span>
-            </p>
-            <p style="width:50px">
-              <img src="./assets/svg/skills-icon/react.svg" alt=""> <span>react</span>
-            </p>
-          </ul>
+
         </div>
         <div class="skills-explained mt-4">
           <p>⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications</p>
@@ -335,6 +338,23 @@
       ]
     });
   </script>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <script>// When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }</script>
 
 </body>
 
