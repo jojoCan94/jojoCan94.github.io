@@ -70,11 +70,15 @@
   margin-top: 1rem;
 }
 
-.social-media-div a {
+.social-media-icons {
   display: flex;
   align-items: center;
   margin: 10px;
   text-decoration: none;
+}
+
+.social-media-icons img {
+  width: 40px;
 }
 
 .github img {
@@ -103,7 +107,7 @@ footer {
   text-align: center;
   background-color: var(--light-black);
   color: white;
-  height: 15rem;
+  height: 10rem;
 }
 
 @media only screen and (max-width: 991px) {
