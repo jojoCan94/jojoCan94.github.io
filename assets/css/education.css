@@ -6,8 +6,7 @@
   line-height: normal;
   color: white;
   margin: 8rem auto 0;
-  margin-left: 2rem;
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
 }
 
 .education-card h1 {
@@ -53,22 +52,25 @@
   /* Education section */
   .education-card {
     display: flex;
-    margin: 0;
     line-height: normal;
     color: white;
-    padding-left: 0;
+    margin-bottom: 4rem;
   }
 
   .education-card h1 {
+    margin-bottom: 2.5rem;
     font-size: 4rem;
   }
 
-  .education-card img {
-    width: 150px;
+  .education-card-left {
+    display: flex;
+    justify-content: center;
   }
 
   .unibo-logo {
     text-align: center;
+    margin: 2rem;
+    width: 200px;
   }
 
   .education-card-border {
@@ -81,7 +83,7 @@
   .education-card,
   .reach-out-card {
     display: flex;
-    margin: 0;
+    margin-bottom: 4rem;
     line-height: normal;
     color: white;
     text-align: center;
@@ -90,22 +92,32 @@
   }
 
   .education-card h1 {
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  /* Education section */
-  .education-card {
-    line-height: normal;
-    text-align: center;
+    font-size: 45px;
   }
 
-  .education-card h1 {
-    font-size: 3rem;
+  .education-card-right h3 {
+    font-size: 18px;
+  }
+
+  .education-card-right h5 {
+    font-size: 13px;
+  }
+
+  .education-card-right-date {
+    font-size: 10px;
+  }
+
+  .education-card-right-description {
+    font-size: 15px;
   }
 
   .education-card-left {
     margin-top: 2.5rem;
+  }
+
+  .education-card img {
+    margin-bottom: 3rem;
+    width: 100px;
+    margin-top: 0;
   }
 }

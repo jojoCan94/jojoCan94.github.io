@@ -75,6 +75,10 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .work-card {
+    margin-bottom: 6rem;
+  }
+
   .work-card-syscons,
   .work-card-nexum {
     border-radius: 1rem;
@@ -89,6 +93,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .work-card {
+    margin-bottom: 6rem;
+  }
   .work-card h1 {
     text-align: center;
   }
