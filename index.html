@@ -214,13 +214,13 @@
     </div>
 
     <!-- Work experiences section -->
-    <div id="work-experiences" class="row work-section">
+    <div class="row work-section" id="work-experiences">
       <h1>Experiences</h1>
 
       <div class="work-cards">
         <!-- #1 -->
         <div class="work-card-syscons">
-          <div class="work-logo-section mb-4">
+          <div class="work-logo-section">
             <img class="work-logo" src="./assets/logo/work-logos/syscons-interactive.jpeg" alt="Syscons logo" />
           </div>
           <div class="work-description">
@@ -229,7 +229,7 @@
             <p class="work-job-location">
               Via Francesco Restelli, 5, Milan, Italy
             </p>
-            <p>
+            <p class="work-jod-desc">
               Here I worked on some internal products of the company and I
               specialized in HTML, CSS, React+Redux+saga+Typescript, branch and
               repo management on gitlab, google cloud, Api rest, TDD&e2e, jira
@@ -240,14 +240,14 @@
 
         <!-- #2 -->
         <div class="work-card-nexum">
-          <div class="work-logo-section mb-4">
+          <div class="work-logo-section">
             <img class="work-logo" src="./assets/logo/work-logos/nexum-logo.jpeg" alt="Nexum-ai logo" />
           </div>
           <div class="work-description">
             <h3>Cloud Frontend Developer</h3>
             <p class="work-job-title">Nexum-ai</p>
             <p class="work-job-location">Via Rodi, 49 - 00195 Rome, Italy</p>
-            <p>
+            <p class="work-jod-desc">
               Here I worked on some internal products of the company and I
               specialized in HTML, CSS, React+Redux+saga+Typescript, branch and
               repo management on gitlab, google cloud, Api rest, TDD&e2e, jira
@@ -378,7 +378,7 @@
       ],
     });
   </script>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <button onclick="topFunction()" id="sticker-button" title="Go to top">☝️</button>
   <script>
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function () {
@@ -390,9 +390,9 @@
         document.body.scrollTop > 20 ||
         document.documentElement.scrollTop > 20
       ) {
-        document.getElementById("myBtn").style.display = "block";
+        document.getElementById("sticker-button").style.display = "block";
       } else {
-        document.getElementById("myBtn").style.display = "none";
+        document.getElementById("sticker-button").style.display = "none";
       }
     }
 

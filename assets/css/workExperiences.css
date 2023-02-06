@@ -26,10 +26,27 @@
   align-items: center;
 }
 
+.work-description h3 {
+  font-size: 30px;
+}
+
+.work-job-title {
+  font-size: 25px;
+}
+
+.work-job-location {
+  font-size: 20px;
+}
+
+.work-jod-desc {
+  font-size: 15px;
+}
+
 .work-card-syscons,
 .work-card-nexum {
   border-radius: 1rem;
   margin: 1rem;
+  padding: 1rem;
   box-shadow: 0 1px 20px #284893;
   width: 650px;
 }
@@ -58,13 +75,110 @@
     margin-bottom: 6rem;
   }
 
-  .work-works {
+  .work-cards {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
   }
+
+  .work-description h3 {
+    font-size: 30px;
+  }
+
+  .work-job-title {
+    font-size: 25px;
+  }
+
+  .work-job-location {
+    font-size: 20px;
+  }
+
+  .work-jod-desc {
+    font-size: 15px;
+  }
+
+  .work-card-syscons,
+  .work-card-nexum {
+    padding: 1rem;
+    width: 550px;
+  }
 }
+
+@media only screen and (max-width: 1199px) {
+  .work-section {
+    margin-bottom: 6rem;
+  }
+
+  .work-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .work-description h3 {
+    font-size: 30px;
+  }
+
+  .work-job-title {
+    font-size: 23px;
+  }
+
+  .work-job-location {
+    font-size: 18px;
+  }
+
+  .work-jod-desc {
+    font-size: 13px;
+  }
+
+  .work-card-syscons,
+  .work-card-nexum {
+    padding: 1rem;
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .work-section {
+    margin-bottom: 6rem;
+  }
+
+  .work-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .work-description h3 {
+    font-size: 20px;
+  }
+
+  .work-job-title {
+    font-size: 15px;
+  }
+
+  .work-job-location {
+    font-size: 17px;
+  }
+
+  .work-jod-desc {
+    font-size: 13px;
+  }
+
+  .work-card-syscons,
+  .work-card-nexum {
+    width: auto;
+  }
+
+  .work-logo {
+    width: 50px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .work-cards {
     display: flex;
@@ -72,11 +186,17 @@
     justify-content: center;
     align-items: center;
   }
+
   .work-section {
     margin-bottom: 6rem;
   }
   .work-section h1 {
     text-align: center;
+  }
+
+  .work-card-syscons,
+  .work-card-nexum {
+    width: auto;
   }
 }
 
