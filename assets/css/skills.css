@@ -69,20 +69,29 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .skills-title,
-  .skills-text,
+  #skills {
+    margin-top: 3rem;
+  }
+
+  .skills-title h1 {
+    font-size: 30px;
+  }
+
   .skills-paragraph {
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-title,
+  .skills-paragraph,
+  .skills-explained {
     text-align: center;
   }
-}
 
-/* Phone */
-@media only screen and (max-width: 400px) {
-  .skills-title,
-  .skills-text,
-  .skills-paragraph {
-    margin: 0rem;
-    margin-left: 0rem;
-    text-align: center;
+  .presentation-image {
+    margin-bottom: 2rem;
   }
 }
