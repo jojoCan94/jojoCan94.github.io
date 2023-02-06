@@ -47,20 +47,22 @@
 }
 
 @media only screen and (max-width: 1399px) {
-  .work-card-syscons,
-  .work-card-nexum {
-    border-radius: 1rem;
-    margin: 1rem;
-    box-shadow: 0 1px 20px #284893;
-    width: 550px;
+  .work-card {
+    display: flex;
+    justify-content: center;
+    line-height: normal;
+    color: white;
+    text-align: center;
+    margin-top: 5rem;
   }
 
-  .work-card-syscons {
-    box-shadow: 0 1px 20px #f32e87;
+  .work-card-syscons,
+  .work-card-nexum {
+    width: 550px;
   }
 }
 
-@media only screen and (max-width: 1199px) {
+/* @media only screen and (max-width: 1199px) {
   .work-card-syscons,
   .work-card-nexum {
     border-radius: 1rem;
@@ -72,10 +74,16 @@
   .work-card-syscons {
     box-shadow: 0 1px 20px #f32e87;
   }
-}
+} */
 
 @media only screen and (max-width: 991px) {
   .work-card {
+    display: flex;
+    justify-content: center;
+    line-height: normal;
+    color: white;
+    text-align: center;
+    margin-top: 5rem;
     margin-bottom: 6rem;
   }
 

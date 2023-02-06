@@ -5,7 +5,7 @@
   margin: 0;
   line-height: normal;
   color: white;
-  margin: 8rem auto 0;
+  margin: 6rem auto 0;
   margin-bottom: 10rem;
 }
 
@@ -54,7 +54,7 @@
     display: flex;
     line-height: normal;
     color: white;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .education-card h1 {
@@ -83,7 +83,7 @@
   .education-card,
   .reach-out-card {
     display: flex;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     line-height: normal;
     color: white;
     text-align: center;
