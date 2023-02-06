@@ -132,6 +132,10 @@
     justify-content: space-around;
     margin-top: 2rem;
   }
+
+  .button-presentation a {
+    font-size: 15px;
+  }
 }
 
 /* CSS rules for hand animation */
