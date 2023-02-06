@@ -10,13 +10,20 @@
 }
 
 /* Work section */
-.work-card {
+.work-section {
   display: flex;
   justify-content: center;
   line-height: normal;
   color: white;
   text-align: center;
   margin-top: 5rem;
+}
+
+.work-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .work-card-syscons,
@@ -31,13 +38,13 @@
   box-shadow: 0 1px 20px #f32e87;
 }
 
-.work-card h1 {
+.work-section h1 {
   text-align: left;
   font-size: 4rem;
   margin-bottom: 4rem;
 }
 
-.work-card img {
+.work-section img {
   width: 150px;
 }
 
@@ -47,73 +54,37 @@
 }
 
 @media only screen and (max-width: 1399px) {
-  .work-card {
-    display: flex;
-    justify-content: center;
-    line-height: normal;
-    color: white;
-    text-align: center;
-    margin-top: 5rem;
-  }
-
-  .work-card-syscons,
-  .work-card-nexum {
-    width: 550px;
-  }
-}
-
-/* @media only screen and (max-width: 1199px) {
-  .work-card-syscons,
-  .work-card-nexum {
-    border-radius: 1rem;
-    margin: 1rem;
-    box-shadow: 0 1px 20px #284893;
-    width: 447px;
-  }
-
-  .work-card-syscons {
-    box-shadow: 0 1px 20px #f32e87;
-  }
-} */
-
-@media only screen and (max-width: 991px) {
-  .work-card {
-    display: flex;
-    justify-content: center;
-    line-height: normal;
-    color: white;
-    text-align: center;
-    margin-top: 5rem;
+  .work-section {
     margin-bottom: 6rem;
   }
 
-  .work-card-syscons,
-  .work-card-nexum {
-    border-radius: 1rem;
-    margin: 1rem;
-    box-shadow: 0 1px 20px #284893;
-    width: 360px;
-  }
-
-  .work-card-syscons {
-    box-shadow: 0 1px 20px #f32e87;
+  .work-works {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
-
 @media only screen and (max-width: 767px) {
-  .work-card {
+  .work-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-section {
     margin-bottom: 6rem;
   }
-  .work-card h1 {
+  .work-section h1 {
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .work-card {
+  .work-section {
     margin-top: var(--small-font);
   }
-  .work-card h1 {
+  .work-section h1 {
     font-size: var(--big);
   }
 }
