@@ -80,28 +80,22 @@
   <!-- main content -->
   <article class="main-content">
     <div class="row greeting-main">
-      <!-- 1 -->
-      <div class="greeting-text-div col-md-10">
-        <div class="title">
-          <h1>Hi all, I'm Jonathan <span class="wave">👋</span></h1>
-        </div>
-        <div class="greeting-text">
-          <p>
-            A passionate Frontend Software Developer 🚀 having an experience
-            of building Web applications with JavaScript / Typescript /
-            Reactjs / Nodejs and some other cool libraries and frameworks.
-          </p>
-        </div>
+
+      <div class="greeting-text-div col-md-8">
+        <h1 class="title">Hi all, I'm Jonathan <span class="wave">👋</span></h1>
+        <p class="greeting-text">
+          A passionate Frontend Software Developer 🚀 with experience in building web applications using JavaScript,
+          TypeScript, React.js, Node.js and other libraries and frameworks.
+        </p>
         <div class="social-media-div col-sm-12">
-          <a class="social-media-icons" href="https://github.com/jojoCan94" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jojoCan94" target="_blank" rel="noopener noreferrer" class="social-media-icons">
             <img src="./assets/svg/github.png" alt="github" />
           </a>
-          <a class="social-media-icons" href="https://www.linkedin.com/in/jonathancannizzaro/" target="_blank"
-            rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/jonathancannizzaro/" target="_blank" rel="noopener noreferrer"
+            class="social-media-icons">
             <img src="./assets/svg/linkedin.png" alt="linkedin" />
           </a>
-
-          <a class="social-media-icons" href="mailto:jojo.can.94@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:jojo.can.94@gmail.com" target="_blank" rel="noopener noreferrer" class="social-media-icons">
             <img src="./assets/svg/email.png" alt="mail" />
           </a>
         </div>
@@ -113,105 +107,70 @@
             style="background-color: #ad82ff; border-color: #ad82ff">SEE MY RESUME</a>
         </div>
       </div>
+      <div class="greeting-image-div col-md-2 ms-4">
+        <div class="presentation-image">
+          <img src="/assets/logo/logo.png" alt="img" width="200px">
+        </div>
+      </div>
     </div>
 
     <div id="skills" class="row skills-main-section">
       <!-- lottie image -->
-      <div class="greeting-image-div col-md-4">
+      <div class="skills-image-div col-md-4">
         <div class="presentation-image">
           <lottie-player id="firstLottie" src="https://assets2.lottiefiles.com/packages/lf20_ssmuatywSV.json"
-            style="width: 400px; height: 400px" />
+            style="width: 400px; height: 400px" alt="Lottie image error" />
         </div>
       </div>
       <div class="col-md-8">
-        <div class="col-md-12 skills-title">
-          <h1>What I do</h1>
-        </div>
-        <div class="skills-paragraph">
-          <p>
-            I am incurably curious about both frontend and beckend
-            technologies however my absolute passion is frontend.
-          </p>
-        </div>
+        <h1 class="skills-title col-md-12">What I do</h1>
+        <p class="skills-paragraph">
+          Sono incurabilmente curioso sia di tecnologie front-end che back-end, ma la mia passione assoluta è il
+          front-end.
+        </p>
         <div class="mt-4">
-          <!-- first line -->
           <ul class="d-flex justify-content-around p-3">
-            <p>
-              <img src="./assets/svg/skills-icon/html.svg" width="80px" alt="html" />
-            </p>
-            <p>
-              <img src="./assets/svg/skills-icon/css.svg" width="80px" alt="css" />
-            </p>
-            <p>
-              <img src="./assets/svg/skills-icon/js.svg" width="80px" alt="js" />
-            </p>
-            <p>
-              <img src="./assets/svg/skills-icon/google.svg" width="80px" alt="google" />
-            </p>
+            <div>
+              <img src="./assets/svg/skills-icon/html.svg" width="80px" alt="HTML">
+            </div>
+            <div>
+              <img src="./assets/svg/skills-icon/css.svg" width="80px" alt="CSS">
+            </div>
+            <div>
+              <img src="./assets/svg/skills-icon/js.svg" width="80px" alt="JS">
+            </div>
+            <div>
+              <img src="./assets/svg/skills-icon/google.svg" width="80px" alt="Google">
+            </div>
           </ul>
           <ul class="d-flex justify-content-around p-3">
-            <p>
-              <img src="./assets/svg/skills-icon/nodejs.svg" width="80px" alt="nodejs" />
-            </p>
-            <p>
-              <img src="./assets/svg/skills-icon/npm.svg" width="80px" alt="npm" />
-            </p>
-            <p>
-              <img src="./assets/svg/skills-icon/python.svg" width="80px" alt="python" />
-            </p>
-            <p>
-              <img src="./assets/svg/skills-icon/react.svg" width="80px" alt="react" />
-            </p>
+            <div>
+              <img src="./assets/svg/skills-icon/nodejs.svg" width="80px" alt="Node.js">
+            </div>
+            <div>
+              <img src="./assets/svg/skills-icon/npm.svg" width="80px" alt="npm">
+            </div>
+            <div>
+              <img src="./assets/svg/skills-icon/python.svg" width="80px" alt="Python">
+            </div>
+            <div>
+              <img src="./assets/svg/skills-icon/react.svg" width="80px" alt="React">
+            </div>
           </ul>
-
-          <!-- second line -->
         </div>
-        <div class="skills-explained mt-4">
-          <p>
-            ⚡ Develop highly interactive Front end / User Interfaces for your
-            web and mobile applications
-          </p>
 
-          <p>
-            ⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks
-          </p>
-
-          <p>
-            ⚡ Integration of third party services such as Firebase/ AWS /
-            Digital Ocean
-          </p>
-        </div>
+        <p class="skills-explained mt-4">
+          ⚡ Sviluppo di interfacce utente altamente interattive per le tue applicazioni web e mobili.
+        </p>
+        <p class="skills-explained">
+          ⚡ Progressive Web Applications (PWA) in normali e SPA Stacks.
+        </p>
+        <p class="skills-explained">
+          ⚡ Integrazione di servizi di terze parti come Firebase/AWS/Digital Ocean.
+        </p>
       </div>
     </div>
 
-    <!-- Education section -->
-    <div class="row education-card" style="
-          animation-fill-mode: both;
-          animation-duration: 1000ms;
-          animation-delay: 0ms;
-          animation-iteration-count: 1;
-          opacity: 1;
-          animation-name: react-reveal-168110223544049-2;
-        ">
-      <h1>Education</h1>
-
-      <div class="education-card-left col-md-3">
-        <img class="unibo-logo" src="./assets/svg/education-section/unibo.svg" alt="university logo" />
-      </div>
-
-      <div class="education-card-right col-md-8">
-        <h3>Alma Mater Studiorum - Università di Bologna</h3>
-        <h5>I attended the computer science course</h5>
-        <p class="education-card-right-date">
-          September 2019 - December 2021
-        </p>
-        <p class="education-card-right-description">
-          I took courses in Software Engineering, Software Programming, Web
-          Security, Operating Systems, algorithms and data structures..
-        </p>
-      </div>
-      <div class="education-card-border"></div>
-    </div>
 
     <!-- Work experiences section -->
     <div class="row work-section" id="work-experiences">
@@ -249,7 +208,7 @@
             <p class="work-job-location">Via Rodi, 49 - 00195 Rome, Italy</p>
             <p class="work-jod-desc">
               Here I worked on some internal products of the company and I
-              specialized in HTML, CSS, React+Redux+saga+Typescript, branch and
+              specialize in HTML, CSS, React+Redux+saga+Typescript, branch and
               repo management on gitlab, google cloud, Api rest, TDD&e2e, jira
               platform(agile work)
             </p>

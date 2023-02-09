@@ -84,6 +84,10 @@
   .greeting-text {
     width: 100%;
   }
+
+  .greeting-image-div {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 820px) {
