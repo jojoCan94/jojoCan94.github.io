@@ -14,3 +14,28 @@
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
+
+.jc-logo {
+  width: 20rem;
+  padding: 0 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* little Phones */
+@media only screen and (max-width: 400px) {
+  .name-logo {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    align-content: start;
+  }
+  .js-logo {
+    width: 10rem;
+  }
+}
