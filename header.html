@@ -1,39 +1,28 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-md">
-    <!-- sub-container, two elements -->
-    <div class="col-md-4">
-        <a class="navbar-brand mb-0 h1 d-flex align-items-center text-white" href="#">
-            <h1>
-                JC Dev
-            </h1>
-        </a>
-    </div>
-
-    <!-- menu button when viewing from mobile -->
-    <button type="button" data-bs-toggle="collapse" data-bs-target=".navbarNav" class="navbar-toggler navbar-light"
-        aria-controls=".navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span style="color: white"><img src="./assets/not-svg-icons/menu-icon.png" alt="ham-icon" width="25px"
-                style="fill: white" /></span>
-    </button>
-
-    <!-- Desktop navbar menu -->
-    <div class="collapse navbar-collapse navbarNav">
-        <ul class="navItems navbar-nav ms-auto flex-nowrap">
-            <li class="nav-item active">
-                <h4 class="nav-hover-item">
-                    <a href="#skills" class="nav-link" style="color: white">Skills</a>
-                </h4>
-            </li>
-            <li class="nav-item active">
-                <h4 class="nav-hover-item">
-                    <a href="#experiences" class="nav-link" style="color: white">Works</a>
-                </h4>
-            </li>
-            <li class="nav-item active">
-                <h4 class="nav-hover-item">
-                    <a href="#contact-me" class="nav-link" style="color: white">Contacts</a>
-                </h4>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">JC Dev</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-center text-xxl-h3 text-xl-h4 text-lg-h5 text-sm-h6" href="#skills">
+                        <i class="fas fa-code"></i> Skills
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center text-xxl-h3 text-xl-h4 text-lg-h5 text-sm-h6" href="#experiences">
+                        <i class="fas fa-briefcase"></i> Works
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center text-xxl-h3 text-xl-h4 text-lg-h5 text-sm-h6" href="#contact-me">
+                        <i class="fas fa-envelope"></i> Contacts
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
