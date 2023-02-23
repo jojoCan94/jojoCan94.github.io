@@ -13,8 +13,11 @@
     crossorigin="anonymous"></script>
   <!-- lottie images -->
   <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-  <link href="./assets/css/custom.css" rel="stylesheet" />
+  <!-- Script that  -->
+  <script src="script.js"></script>
+
   <!-- CSS filess -->
   <link rel="stylesheet" href="/assets/css/header.css" />
   <link rel="stylesheet" href="/assets/css/style.css" />
@@ -24,7 +27,7 @@
   <link rel="stylesheet" href="/assets/css/workExperiences.css" />
   <link rel="stylesheet" href="/assets/css/reachMe.css" />
   <link rel="stylesheet" href="/assets/css/backToTop.css" />
-  <link rel="stylesheet" href="/assets/css/footer.css" />
+  <!-- <link rel="stylesheet" href="/assets/css/footer.css" /> -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,297 +37,52 @@
 </head>
 
 <body class="main-content">
-  <header id="header" class="header-main p-4">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md">
-      <div class="col-sm-6">
-        <!-- sub-container, two elements -->
-        <div class="row">
-          <h3 class="name-logo">
-            <a class="navbar-brand mb-0 h1" href="#" style="color: white">
-              Jonathan Cannizzaro
-            </a>
-          </h3>
-        </div>
-      </div>
-      <!-- menu button when viewing from mobile -->
-      <button type="button" data-bs-toggle="collapse" data-bs-target=".navbarNav" class="navbar-toggler navbar-light"
-        aria-controls=".navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span style="color: white"><img src="./assets/not-svg-icons/menu-icon.png" alt="ham-icon" width="25px"
-            style="fill: white" /></span>
-      </button>
-
-      <!-- Desktop navbar menu -->
-      <div class="collapse navbar-collapse navbarNav">
-        <ul class="navItems navbar-nav ms-auto flex-nowrap">
-          <li class="nav-item active">
-            <h4 class="nav-hover-item">
-              <a href="#skills" class="nav-link" style="color: white">Skills</a>
-            </h4>
-          </li>
-          <li class="nav-item active">
-            <h4 class="nav-hover-item">
-              <a href="#work-experiences" class="nav-link" style="color: white">Works</a>
-            </h4>
-          </li>
-          <li class="nav-item active">
-            <h4 class="nav-hover-item">
-              <a href="#contact-me" class="nav-link" style="color: white">Contacts</a>
-            </h4>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <header id="header" class="header-main"></header>
 
   <!-- main content -->
   <article class="main-content">
-    <div class="row greeting-main">
 
-      <div class="greeting-text-div col-md-8">
-        <h1 class="title">Hi all, I'm Jonathan <span class="wave">👋</span></h1>
-        <p class="greeting-text">
-          A passionate Frontend Software Developer 🚀 with experience in building web applications using JavaScript,
-          TypeScript, React.js, Node.js and other libraries and frameworks.
-        </p>
-        <div class="social-media-div col-sm-12">
-          <a href="https://github.com/jojoCan94" target="_blank" rel="noopener noreferrer" class="social-media-icons">
-            <img src="./assets/svg/github.png" alt="github" />
-          </a>
-          <a href="https://www.linkedin.com/in/jonathancannizzaro/" target="_blank" rel="noopener noreferrer"
-            class="social-media-icons">
-            <img src="./assets/svg/linkedin.png" alt="linkedin" />
-          </a>
-          <a href="mailto:jojo.can.94@gmail.com" target="_blank" rel="noopener noreferrer" class="social-media-icons">
-            <img src="./assets/svg/email.png" alt="mail" />
-          </a>
-        </div>
-        <div class="button-presentation col-sm-12">
-          <a href="mailto:jojo.can.94@gmail.com" class="btn btn-md m-2" role="button" aria-pressed="true"
-            style="background-color: #ad82ff; border-color: #ad82ff">CONTACT ME</a>
-          <a href="https://drive.google.com/file/d/1eavvNPP9TE-ALrtxx7IPc1vQp0Lwonwg/view?usp=sharing"
-            class="btn btn-md m-2" role="button" aria-pressed="true" target="_blank"
-            style="background-color: #ad82ff; border-color: #ad82ff">SEE MY RESUME</a>
-        </div>
-      </div>
-      <!-- <div class="greeting-image-div col-md-2 ms-4">
-        <div class="presentation-image">
-          <img src="/assets/logo/logo.png" alt="img" width="200px">
-        </div>
-      </div> -->
-    </div>
+    <!-- greeting section -->
+    <div id="greeting"></div>
 
-    <div id="skills" class="row skills-main-section">
-      <!-- lottie image -->
-      <div class="skills-image-div col-md-4">
-        <div class="presentation-image">
-          <lottie-player id="firstLottie" src="https://assets2.lottiefiles.com/packages/lf20_ssmuatywSV.json"
-            style="width: 400px; height: 400px" alt="Lottie image error" />
+    <!-- Skills section -->
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Left-hand column for the skills image -->
+        <div class="skills-image-div">
+          <div class="presentation-image">
+            <lottie-player id="firstLottie" src="https://assets2.lottiefiles.com/packages/lf20_ssmuatywSV.json"
+              style="width: 400px; height: 400px" alt="Lottie image error" />
+          </div>
         </div>
       </div>
       <div class="col-md-8">
-        <h1 class="skills-title col-md-12">What I do</h1>
-        <p class="skills-paragraph">
-          Sono incurabilmente curioso sia di tecnologie front-end che back-end, ma la mia passione assoluta è il
-          front-end.
-        </p>
-        <div class="mt-4">
-          <ul class="d-flex justify-content-around p-3">
-            <div>
-              <img src="./assets/svg/skills-icon/html.svg" width="80px" alt="HTML">
-            </div>
-            <div>
-              <img src="./assets/svg/skills-icon/css.svg" width="80px" alt="CSS">
-            </div>
-            <div>
-              <img src="./assets/svg/skills-icon/js.svg" width="80px" alt="JS">
-            </div>
-            <div>
-              <img src="./assets/svg/skills-icon/google.svg" width="80px" alt="Google">
-            </div>
-          </ul>
-          <ul class="d-flex justify-content-around p-3">
-            <div>
-              <img src="./assets/svg/skills-icon/nodejs.svg" width="80px" alt="Node.js">
-            </div>
-            <div>
-              <img src="./assets/svg/skills-icon/npm.svg" width="80px" alt="npm">
-            </div>
-            <div>
-              <img src="./assets/svg/skills-icon/python.svg" width="80px" alt="Python">
-            </div>
-            <div>
-              <img src="./assets/svg/skills-icon/react.svg" width="80px" alt="React">
-            </div>
-          </ul>
-        </div>
-
-        <p class="skills-explained mt-4">
-          ⚡ Sviluppo di interfacce utente altamente interattive per le tue applicazioni web e mobili.
-        </p>
-        <p class="skills-explained">
-          ⚡ Progressive Web Applications (PWA) in normali e SPA Stacks.
-        </p>
-        <p class="skills-explained">
-          ⚡ Integrazione di servizi di terze parti come Firebase/AWS/Digital Ocean.
-        </p>
+        <!-- Right-hand column for the skills section -->
+        <div id="skills" class="row skills-main-section"></div>
       </div>
     </div>
-
 
     <!-- Work experiences section -->
-    <div class="row work-section" id="work-experiences">
-      <h1>Experiences</h1>
+    <div id="experiences" class="row work-section"></div>
 
-      <div class="work-cards">
-        <!-- #1 -->
-        <div class="work-card-syscons">
-          <div class="work-logo-section">
-            <img class="work-logo" src="./assets/logo/work-logos/syscons-interactive.jpeg" alt="Syscons logo" />
-          </div>
-          <div class="work-description">
-            <h3>Frontend Developer</h3>
-            <p class="work-job-title">Syscons Interactive</p>
-            <p class="work-job-location">
-              Via Francesco Restelli, 5, Milan, Italy
-            </p>
-            <p class="work-jod-desc">
-              Here I worked on some internal products of the company and I
-              specialized in HTML, CSS, React+Redux+saga+Typescript, branch and
-              repo management on gitlab, google cloud, Api rest, TDD&e2e, jira
-              platform(agile work)
-            </p>
-          </div>
-        </div>
+    <!-- Contact me section -->
+    <div id="contact-me" class="row reach-out-card"></div>
 
-        <!-- #2 -->
-        <div class="work-card-nexum">
-          <div class="work-logo-section">
-            <img class="work-logo" src="./assets/logo/work-logos/nexum-logo.jpeg" alt="Nexum-ai logo" />
-          </div>
-          <div class="work-description">
-            <h3>Cloud Frontend Developer</h3>
-            <p class="work-job-title">Nexum-ai</p>
-            <p class="work-job-location">Via Rodi, 49 - 00195 Rome, Italy</p>
-            <p class="work-jod-desc">
-              Here I worked on some internal products of the company and I
-              specialize in HTML, CSS, React+Redux+saga+Typescript, branch and
-              repo management on gitlab, google cloud, Api rest, TDD&e2e, jira
-              platform(agile work)
-            </p>
-          </div>
-        </div>
-      </div>
+    <!-- Footer section -->
+    <div id="footer"></div>
 
-    </div>
-
-    <!-- Reach out me! -->
-    <div id="contact-me" class="row reach-out-card">
-      <h1>Reach out to me!</h1>
-
-      <div class="reach-out-card-right col-md-4">
-        <img class="profile-photo" src="./assets/profile-photo/photo-me.png" alt="university logo" />
-      </div>
-
-      <div class="reach-out-card-left col-md-8">
-        <p class="blog-subtitle">
-          DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL.
-        </p>
-        <h4>"Software Developer | Still Finding 💭 "</h4>
-        <p>
-          I currently work for a company as a frontend developer on ecommerce
-          projects and I'm following 3 courses on udemy: React native, Nextjs
-          framework, nodejs.
-        </p>
-        <svg viewBox="-0.5 -2 20 19" version="1.1" width="22" height="16" aria-hidden="true" stroke="currentColor">
-          <path fill-rule="evenodd"
-            d="M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z">
-          </path>
-        </svg>
-        Bologna, Italy
-
-        <div class="social-media-div col-sm-12">
-          <a class="social-media-icons" href="https://github.com/jojoCan94" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/svg/github.png" alt="github" />
-          </a>
-          <a class="social-media-icons" href="https://www.linkedin.com/in/jonathancannizzaro/" target="_blank"
-            rel="noopener noreferrer">
-            <img src="./assets/svg/linkedin.png" alt="linkedin" />
-          </a>
-
-          <a class="social-media-icons" href="mailto:jojo.can.94@gmail.com" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/svg/email.png" alt="mail" />
-          </a>
-        </div>
-      </div>
-    </div>
   </article>
-  <footer class="footer">
-    <div class="container">
-      <div class="col-sm copyright">✍️ with ❤️ by Me</div>
-      <div class="col-sm social-icons">
-        Theme inspired by
-        <a href="https://github.com/saadpasta/developerFolio">developerFolio</a>
-      </div>
-    </div>
-  </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+  <!-- Button to go back to the top of the page -->
+  <button onclick="scrollToTop()" id="goToTopButton" title="Go to top">☝️</button>
 
-  <script>
-    // create ul table and li elements
-    var ul = document.createElement("ul");
+</body>
 
-    // create new promise and fetch local json to obtain data
-    const jobData = new Promise((resolve, reject) => {
-      document.getElementById("workList").appendChild(ul);
-      fetch("./data/works.json")
-        .then((response) => response.json())
-        .then((jData) => {
-          // map array data from 'fetched' json
-          jData.map((item) => {
-            // create li elements
-            var li = document.createElement("li");
-            // set an attribute to all li elements
-            li.setAttribute("class", "item");
-            // append li elements to ul element
-            ul.appendChild(li);
-            // populate (li children) li with item data
-            li.innerHTML = li.innerHTML + item.company;
-          });
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
-    // testing columns
-    // create ul table and li elements
-    var ul2 = document.createElement("ul");
-    // create new promise and fetch local json to obtain data
-    const jobData2 = new Promise((resolve, reject) => {
-      document.getElementById("workList2").appendChild(ul2);
-      fetch("./data/works.json")
-        .then((response) => response.json())
-        .then((jData) => {
-          // map array data from 'fetched' json
-          jData.map((item) => {
-            // create li elements
-            var li2 = document.createElement("li");
-            // set an attribute to all li elements
-            li2.setAttribute("class", "item");
-            // append li elements to ul element
-            ul2.appendChild(li2);
-            // populate (li children) li with item data
-            li2.innerHTML = li2.innerHTML + item.company;
-          });
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+<!-- lottie image -->
+<script>
 
-    /* Lottie Icon, animated */
+  /* Lottie Icon, animated */
+  window.onload = function () {
     LottieInteractivity.create({
       mode: "scroll",
       player: "#firstLottie",
@@ -336,31 +94,9 @@
         },
       ],
     });
-  </script>
-  <button onclick="topFunction()" id="sticker-button" title="Go to top">☝️</button>
-  <script>
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () {
-      scrollFunction();
-    };
+    console.log("LottieInteractivity function called successfully");
+  }
 
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
-        document.getElementById("sticker-button").style.display = "block";
-      } else {
-        document.getElementById("sticker-button").style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-  </script>
-</body>
+</script>
 
 </html>

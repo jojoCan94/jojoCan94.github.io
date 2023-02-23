@@ -1,4 +1,4 @@
-#sticker-button {
+#goToTopButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,13 +21,13 @@
   transition: all 0.2s ease-in-out;
 }
 
-.sticker-button:hover {
+.goToTopButton:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-.sticker-button i {
+.goToTopButton i {
   color: #ffffff;
   font-size: 24px;
 }
