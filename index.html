@@ -41,20 +41,48 @@
 
   <!-- main content -->
   <article class="main-content">
+
+    <!-- greeting section -->
     <div id="greeting"></div>
-    <div id="skills" class="row skills-main-section"></div>
+
+    <!-- Skills section -->
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Left-hand column for the skills image -->
+        <div class="skills-image-div">
+          <div class="presentation-image">
+            <lottie-player id="firstLottie" src="https://assets2.lottiefiles.com/packages/lf20_ssmuatywSV.json"
+              style="width: 400px; height: 400px" alt="Lottie image error" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <!-- Right-hand column for the skills section -->
+        <div id="skills" class="row skills-main-section"></div>
+      </div>
+    </div>
+
+    <!-- Work experiences section -->
     <div id="experiences" class="row work-section"></div>
+
+    <!-- Contact me section -->
     <div id="contact-me" class="row reach-out-card"></div>
+
+    <!-- Footer section -->
     <div id="footer"></div>
 
   </article>
 
+  <!-- Button to go back to the top of the page -->
+  <button onclick="scrollToTop()" id="goToTopButton" title="Go to top">☝️</button>
 
-  <!-- Dipendenze di terze parti -->
+</body>
 
+<!-- lottie image -->
+<script>
 
-  <script>
-    /* Lottie Icon, animated */
+  /* Lottie Icon, animated */
+  window.onload = function () {
     LottieInteractivity.create({
       mode: "scroll",
       player: "#firstLottie",
@@ -66,8 +94,9 @@
         },
       ],
     });
-  </script>
-  <button onclick="scrollToTop()" id="goToTopButton" title="Go to top">☝️</button>
-</body>
+    console.log("LottieInteractivity function called successfully");
+  }
+
+</script>
 
 </html>
