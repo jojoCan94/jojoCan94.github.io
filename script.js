@@ -1,6 +1,6 @@
 function loadSections() {
   // Load the content of the header
-  fetch("header.html")
+  fetch("/portfolio/header/header.html")
     .then((response) => response.text())
     .then((data) => {
       const header = document.getElementById("header");
@@ -8,7 +8,7 @@ function loadSections() {
     });
 
   // Load the content of the greeting section
-  fetch("greeting.html")
+  fetch("/portfolio/greeting/greeting.html")
     .then((response) => response.text())
     .then((data) => {
       const main = document.getElementById("greeting");
@@ -16,7 +16,7 @@ function loadSections() {
     });
 
   // Load the content of the skills section
-  fetch("skills.html")
+  fetch("/portfolio/skills/skills.html")
     .then((response) => response.text())
     .then((data) => {
       const main = document.getElementById("skills");
@@ -24,7 +24,7 @@ function loadSections() {
     });
 
   // Load the content of the experiences section
-  fetch("experiences.html")
+  fetch("/portfolio/experiences/experiences.html")
     .then((response) => response.text())
     .then((data) => {
       const main = document.getElementById("experiences");
@@ -32,7 +32,7 @@ function loadSections() {
     });
 
   // Load the content of the contact me section
-  fetch("contact-me.html")
+  fetch("/portfolio/contact-me/contact-me.html")
     .then((response) => response.text())
     .then((data) => {
       const main = document.getElementById("contact-me");
@@ -40,7 +40,7 @@ function loadSections() {
     });
 
   // Load the content of the footer
-  fetch("footer.html")
+  fetch("/portfolio/footer/footer.html")
     .then((response) => response.text())
     .then((data) => {
       const footer = document.getElementById("footer");
