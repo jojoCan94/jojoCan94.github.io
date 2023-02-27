@@ -1,41 +1,302 @@
 <h1>Experiences</h1>
 
-<div class="work-cards">
-  <!-- #1 -->
-  <div class="work-card-syscons">
-    <div class="work-logo-section">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
       <img
-        class="work-logo"
-        src="./assets/logo/work-logos/syscons-interactive.jpeg"
+        class="work-logo title"
+        src="./assets/logo/work-logos/syscons-interactive.webp"
         alt="Syscons logo"
+        width="300px"
       />
     </div>
-    <div class="work-description">
-      <h3>Frontend Developer</h3>
-      <p class="work-job-title">Syscons Interactive</p>
-      <p class="work-job-location">Via Francesco Restelli, 5, Milan, Italy</p>
-      <p class="work-jod-desc">
-        Here I worked on some internal products of the company and I specialized in HTML, CSS,
-        React+Redux+saga+Typescript, branch and repo management on gitlab, google cloud, Api rest,
-        TDD&e2e, jira platform(agile work)
-      </p>
-    </div>
-  </div>
-
-  <!-- #2 -->
-  <div class="work-card-nexum">
-    <div class="work-logo-section">
-      <img class="work-logo" src="./assets/logo/work-logos/nexum-logo.jpeg" alt="Nexum-ai logo" />
-    </div>
-    <div class="work-description">
-      <h3>Cloud Frontend Developer</h3>
-      <p class="work-job-title">Nexum-ai</p>
-      <p class="work-job-location">Via Rodi, 49 - 00195 Rome, Italy</p>
-      <p class="work-jod-desc">
-        Here I worked on some internal products of the company and I specialize in HTML, CSS,
-        React+Redux+saga+Typescript, branch and repo management on gitlab, google cloud, Api rest,
-        TDD&e2e, jira platform(agile work)
-      </p>
+    <div class="flip-card-back">
+      <div class="card-info">
+        <div class="work-description">
+          <h3>Frontend Developer</h3>
+          <p class="work-job-title">Syscons Interactive</p>
+          <p class="work-job-location">Via Francesco Restelli, 5, Milan, Italy</p>
+          <p class="work-jod-desc">
+            Here I worked on some internal products of the company and I specialized in HTML, CSS,
+            React+Redux+saga+Typescript, branch and repo management on gitlab, google cloud, Api
+            rest, TDD&e2e, jira platform(agile work)
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front-nex">
+      <img
+        class="work-logo title rounded-circle"
+        src="./assets/logo/work-logos/nexum-logo.jpeg"
+        alt="Syscons logo"
+        width="180px"
+      />
+    </div>
+    <div class="flip-card-back-nex">
+      <div class="card-info">
+        <div class="work-description">
+          <h3>Cloud Frontend Developer</h3>
+          <p class="work-job-title">Nexum-ai</p>
+          <p class="work-job-location">Via Rodi, 49 - 00195 Rome, Italy</p>
+          <p class="work-jod-desc">
+            Here I worked on some internal products of the company and I specialize in HTML, CSS,
+            React+Redux+saga+Typescript, branch and repo management on gitlab, google cloud, Api
+            rest, TDD&e2e, jira platform(agile work)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .flip-card {
+    padding: 1rem;
+    background-color: transparent;
+    width: 390px;
+    height: 454px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #111;
+    border-radius: 1rem;
+  }
+
+  .flip-card-front {
+    background: linear-gradient(
+      120deg,
+      rgb(248, 196, 255) 60%,
+      rgb(248, 222, 255) 88%,
+      rgb(223, 195, 255) 40%,
+      rgb(184, 46, 234) 48%
+    );
+    color: rgb(176, 80, 255);
+  }
+
+  .flip-card-back {
+    background: linear-gradient(
+      120deg,
+      rgb(178, 145, 255) 30%,
+      rgb(156, 80, 255) 88%,
+      rgb(223, 195, 255) 40%,
+      rgb(188, 160, 255) 78%
+    );
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  /* Nexum experience */
+
+  .flip-card-front-nex,
+  .flip-card-back-nex {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #111;
+    border-radius: 1rem;
+  }
+
+  .flip-card-front-nex {
+    background: linear-gradient(
+      120deg,
+      rgb(196, 210, 255) 60%,
+      rgb(222, 225, 255) 88%,
+      rgb(195, 199, 255) 40%,
+      rgb(46, 49, 234) 48%
+    );
+    color: rgb(83, 80, 255);
+  }
+
+  .flip-card-back-nex {
+    background: linear-gradient(
+      120deg,
+      rgb(145, 152, 255) 30%,
+      rgb(92, 80, 255) 88%,
+      rgb(195, 199, 255) 40%,
+      rgb(160, 161, 255) 78%
+    );
+    color: white;
+    transform: rotateY(180deg);
+  }
+</style>
+
+<!-- <div class="work-cards">
+  <div class="card">
+    <div class="work-logo-section">
+      <img
+        class="work-logo"
+        src="./assets/logo/work-logos/syscons-interactive.webp"
+        alt="Syscons logo"
+        width="300px"
+      />
+    </div>
+    <div class="card-info">
+      <div class="work-description">
+        <h3>Frontend Developer</h3>
+        <p class="work-job-title">Syscons Interactive</p>
+        <p class="work-job-location">Via Francesco Restelli, 5, Milan, Italy</p>
+        <p class="work-jod-desc">
+          Here I worked on some internal products of the company and I specialized in HTML, CSS,
+          React+Redux+saga+Typescript, branch and repo management on gitlab, google cloud, Api rest,
+          TDD&e2e, jira platform(agile work)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="--background: linear-gradient(to left, #2b82ff 0%, #0036cc 100%)">
+    <div class="work-title-section">
+      <h2 class="work-title">Nexum-ai</h2>
+    </div>
+    <div class="card-info">
+      <div class="work-description">
+        <h3>Cloud Frontend Developer</h3>
+        <p class="work-job-title">Nexum-ai</p>
+        <p class="work-job-location">Via Rodi, 49 - 00195 Rome, Italy</p>
+        <p class="work-jod-desc">
+          Here I worked on some internal products of the company and I specialize in HTML, CSS,
+          React+Redux+saga+Typescript, branch and repo management on gitlab, google cloud, Api rest,
+          TDD&e2e, jira platform(agile work)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .card {
+      --background: linear-gradient(to left, #5e42fdd3 0%, #cc53ea 100%);
+      width: 650px;
+      height: 400px;
+      padding: 5px;
+      border-radius: 1rem;
+      overflow: visible;
+      background: #f7ba2b;
+      background: var(--background);
+      position: relative;
+      z-index: 1;
+      margin: 10px;
+    }
+
+    .work-title-section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      background: linear-gradient(to right, hsla(200, 100%, 50%, 1), hsla(240, 100%, 50%, 1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      border-radius: 1rem;
+    }
+
+    .work-title {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+    .work-logo-section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .work-logo {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .card-info {
+      --color: #181818;
+      background: var(--color);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 0.7rem;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .work-description {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .card:hover .work-title-section {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .card:hover .card-info {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .card:hover .work-description {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+  </style>
+</div> -->
