@@ -61,6 +61,10 @@
   margin-bottom: 4rem;
 }
 
+.work-section img {
+  width: 150px;
+}
+
 .work-logo {
   margin: 10px;
   text-align: center;
@@ -168,6 +172,10 @@
   .work-card-syscons,
   .work-card-nexum {
     width: auto;
+  }
+
+  .work-logo {
+    width: 50px;
   }
 }
 
