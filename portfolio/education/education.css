@@ -1,11 +1,11 @@
 .card {
   background: #07182e;
-  position: relative;
   display: flex;
   place-content: center;
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
 .education-card {
@@ -22,9 +22,10 @@
   position: absolute;
   width: 200px;
   background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(227, 1, 1));
-  height: 150%;
+  height: 200%;
   animation: rotBGimg 3s linear infinite;
   transition: all 0.2s linear;
+  border-radius: 20px;
 }
 
 @keyframes rotBGimg {
@@ -44,6 +45,50 @@
   inset: 5px;
   border-radius: 15px;
 }
+
+@media screen and (min-width: 992px) {
+  .card {
+    max-width: 800px; /* larghezza massima della card */
+    margin: 0 auto; /* centra la card orizzontalmente */
+  }
+}
+
+/* Stile per dispositivi mobili */
+@media screen and (max-width: 767px) {
+  .education-card {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .education-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .education-card img {
+    padding: 1rem;
+  }
+
+  .education-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Stile per schermi più grandi */
+@media screen and (min-width: 768px) {
+  .education-card {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem; /* aggiunto il padding */
+  }
+
+  .education-card img {
+    width: 100px;
+    flex-shrink: 0;
+  }
+}
+
 .card:hover:before {
   background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
 }
