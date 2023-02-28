@@ -1,3 +1,7 @@
+.education-section h1 {
+  font-size: calc(1.625rem + 2vw);
+}
+
 .card {
   background: #07182e;
   display: flex;
@@ -55,6 +59,9 @@
 
 /* Stile per dispositivi mobili */
 @media screen and (max-width: 767px) {
+  .education-section h1 {
+    text-align: center;
+  }
   .education-card {
     text-align: center;
     padding: 1rem;

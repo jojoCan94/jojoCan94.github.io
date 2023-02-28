@@ -10,7 +10,7 @@
 }
 
 .reach-out-card h1 {
-  font-size: 4rem;
+  font-size: calc(1.625rem + 2vw);
 }
 
 .profile-photo {
