@@ -38,6 +38,13 @@ function loadSections() {
       const main = document.getElementById("contact-me");
       main.innerHTML = data;
     });
+  // Load the content of the contact me section
+  fetch("/portfolio/education/education.html")
+    .then((response) => response.text())
+    .then((data) => {
+      const main = document.getElementById("education");
+      main.innerHTML = data;
+    });
 
   // Load the content of the footer
   fetch("/portfolio/footer/footer.html")
