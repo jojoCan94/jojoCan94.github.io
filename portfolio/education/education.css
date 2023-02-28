@@ -1,124 +1,101 @@
-/* Education section */
+.education-section h1 {
+  font-size: calc(1.625rem + 2vw);
+}
+
+.card {
+  background: #07182e;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
 .education-card {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-  line-height: normal;
+  z-index: 1;
+}
+
+.card h2 {
   color: white;
-  margin-top: 6rem;
-  margin-bottom: 10rem;
+  font-size: 2em;
 }
 
-.education-card h1 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
-.education-card img {
-  width: 150px;
-}
-
-.education-card-left {
-  display: flex;
-  justify-content: center;
-}
-
-.education-card-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.education-card-border {
+.card::before {
+  content: "";
   position: absolute;
-  bottom: 0;
-  height: 30px;
-  width: 70%;
-  border-top: 2px solid hsla(0, 0%, 82.7%, 0.397);
-  margin-bottom: -100px;
-  transition: width 0.6s ease-in-out;
+  width: 200px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(227, 1, 1));
+  height: 200%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+  border-radius: 20px;
 }
 
-.education-card:hover .education-card-border {
-  border-top: 2px solid hsla(0, 100%, 50%, 0.356);
-  width: 100%;
-}
-
-@media only screen and (max-width: 991px) {
-  .nav-link {
-    font-size: 20px;
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
   }
 
-  /* Education section */
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 5px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    max-width: 800px; /* larghezza massima della card */
+    margin: 0 auto; /* centra la card orizzontalmente */
+  }
+}
+
+/* Stile per dispositivi mobili */
+@media screen and (max-width: 767px) {
+  .education-section h1 {
+    text-align: center;
+  }
   .education-card {
-    display: flex;
-    line-height: normal;
-    color: white;
-    margin-bottom: 2rem;
-  }
-
-  .education-card h1 {
-    margin-bottom: 2.5rem;
-    font-size: 4rem;
-  }
-
-  .education-card-left {
-    display: flex;
-    justify-content: center;
-  }
-
-  .unibo-logo {
     text-align: center;
-    margin: 2rem;
-    width: 200px;
+    padding: 1rem;
   }
 
-  .education-card-border {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  /* Education section */
-  .education-card,
-  .reach-out-card {
-    display: flex;
-    margin-bottom: 2rem;
-    line-height: normal;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    padding-left: 0;
-  }
-
-  .education-card h1 {
-    font-size: 45px;
-  }
-
-  .education-card-right h3 {
-    font-size: 18px;
-  }
-
-  .education-card-right h5 {
-    font-size: 13px;
-  }
-
-  .education-card-right-date {
-    font-size: 10px;
-  }
-
-  .education-card-right-description {
-    font-size: 15px;
-  }
-
-  .education-card-left {
-    margin-top: 2.5rem;
+  .education-card h2 {
+    font-size: 1.5rem;
   }
 
   .education-card img {
-    margin-bottom: 3rem;
-    width: 100px;
-    margin-top: 0;
+    padding: 1rem;
   }
+
+  .education-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Stile per schermi più grandi */
+@media screen and (min-width: 768px) {
+  .education-card {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem; /* aggiunto il padding */
+  }
+
+  .education-card img {
+    width: 100px;
+    flex-shrink: 0;
+  }
+}
+
+.card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
 }

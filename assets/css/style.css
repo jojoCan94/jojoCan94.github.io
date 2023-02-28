@@ -24,7 +24,7 @@
 }
 
 #header {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .header {
@@ -89,8 +89,7 @@
 }
 
 .google img {
-  filter: invert(37%) sepia(36%) saturate(2251%) hue-rotate(331deg)
-    brightness(94%) contrast(104%);
+  filter: invert(37%) sepia(36%) saturate(2251%) hue-rotate(331deg) brightness(94%) contrast(104%);
 }
 
 .footer {
@@ -146,8 +145,7 @@ footer {
   }
 
   .google img {
-    filter: invert(37%) sepia(36%) saturate(2251%) hue-rotate(331deg)
-      brightness(94%) contrast(104%);
+    filter: invert(37%) sepia(36%) saturate(2251%) hue-rotate(331deg) brightness(94%) contrast(104%);
   }
 }
 /* little Phones */
