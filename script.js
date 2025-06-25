@@ -56,7 +56,8 @@ function loadSections() {
     .then(() => toggleTopButton());
 }
 
-loadSections();
+// Ensure all sections are loaded only after the DOM is fully parsed
+document.addEventListener("DOMContentLoaded", loadSections);
 
 // Scroll to the top of the document
 function scrollToTop() {
@@ -82,11 +83,15 @@ window.onscroll = function () {
 };
 
 // Call the "scrollToTop" function when the "Go to top" button is clicked
-window.onload = function () {
-  document.getElementById("goToTopButton").onclick = function () {
-    scrollToTop();
-  };
-};
+// Ensure other onload handlers are preserved
+window.addEventListener("load", function () {
+  var goToTopButton = document.getElementById("goToTopButton");
+  if (goToTopButton) {
+    goToTopButton.onclick = function () {
+      scrollToTop();
+    };
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   var goToTopButton = document.getElementById("goToTopButton");
