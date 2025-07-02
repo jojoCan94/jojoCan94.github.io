@@ -31,6 +31,14 @@ function loadSections() {
       main.innerHTML = data;
     });
 
+  // Load the content of the projects section
+  fetch("/portfolio/projects/projects.html")
+    .then((response) => response.text())
+    .then((data) => {
+      const main = document.getElementById("projects");
+      main.innerHTML = data;
+    });
+
   // Load the content of the contact me section
   fetch("/portfolio/contact-me/contact-me.html")
     .then((response) => response.text())
