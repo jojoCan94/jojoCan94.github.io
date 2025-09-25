@@ -67,6 +67,12 @@
   text-align: center;
 }
 
+.work-experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .flip-card {
   padding: 1rem;
   background-color: transparent;

@@ -5,9 +5,9 @@ const Education = (): JSX.Element => {
       <div className="card p-3">
         <div className="education-card d-flex align-items-center flex-column text-center p-3">
           <img src="/assets/logo/unibo.jpg" alt="Education" width="150" />
-          <div>
+          <div className="mt-3">
             <h2 className="education-card-title mb-1">Alma Mater Studiorum- Universitaà degli studi di Bologna</h2>
-            <h3 className="education-card-subtitle mb-1">Scienze inforrmatiche</h3>
+            <h3 className="education-card-subtitle mb-1 mt-4">Scienze inforrmatiche</h3>
             <div className="education-card-date mb-3">2019 - 2021</div>
             <p className="education-card-description">
               I completed two years of the three-year Bachelor's degree program in Computer Science at the University

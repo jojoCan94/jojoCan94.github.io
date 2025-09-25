@@ -1,40 +1,32 @@
-"use client"; // forza lato client
+"use client";
 
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
-interface Props {
-  animationData: any;
-}
+export default function LottieWrapper({ animationData }: { animationData: any }) {
+  const lottieRef = useRef<any>(null);
 
-export default function LottieWrapper({ animationData }: Props) {
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    const handleScroll = () => {
+      if (!lottieRef.current) return;
+      const scrollPercent =
+        window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      const frame = scrollPercent * (lottieRef.current.getDuration(true) ?? 0);
+      lottieRef.current.goToAndStop(frame, true);
+    };
 
-    // evita che giri lato server
-    if (!window.LottieInteractivity) return;
-
-    window.LottieInteractivity.create({
-      mode: "scroll",
-      player: "#firstLottie",
-      actions: [
-        {
-          visibility: [0, 1],
-          type: "seek",
-          frames: [0, 180],
-        },
-      ],
-    });
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <Lottie
-      id="firstLottie"
+      lottieRef={lottieRef}
       animationData={animationData}
-      loop
-      style={{ width: "400px", height: "400px" }}
+      loop={false}
+      style={{ width: 400, height: 400 }}
     />
   );
 }

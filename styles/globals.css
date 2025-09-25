@@ -26,7 +26,7 @@ body {
 }
 
 .main-content {
-  margin: 1rem;
+  padding: 1rem;
   background-color: var(--light-black);
   display: flex;
   flex-direction: column;

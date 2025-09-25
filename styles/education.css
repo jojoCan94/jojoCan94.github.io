@@ -3,17 +3,18 @@
 }
 
 .card {
-  background: #07182e;
+  background: #07182e !important;
   display: flex;
   place-content: center;
   place-items: center;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 20px !important;
   margin: 0 auto;
 }
 
 .education-card {
   z-index: 1;
+  color: white;
 }
 
 .card h2 {

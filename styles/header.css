@@ -41,7 +41,7 @@
 
   .navbar-toggler-icon {
     background-image: url("/assets/not-svg-icons/menu-icon.png");
-    background-color: white;
+    background-color: var(--light-black);
     background-repeat: no-repeat;
     width: 25px;
     height: 25px;

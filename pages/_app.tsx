@@ -10,9 +10,12 @@ import '../styles/projects.css';
 import '../styles/reachMe.css';
 import '../styles/backToTop.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
+    useEffect(() => {
+    import("bootstrap");
+  }, []);
+
   return <Component {...pageProps} />;
 }

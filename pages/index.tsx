@@ -11,11 +11,11 @@ import Greeting from '../components/Greeting';
 import Header from '../components/Header';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
-import dynamic from 'next/dynamic';
 import LottieWrapper from '../components/LottieWrapper';
 
+import animationdata from '../public/assets/lf20_ssmuatywSV.json';
+
 const LOTTIE_PLAYER_SELECTOR = '#firstLottie';
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
             <div className="col-md-4">
               <div className="skills-image-div">
                 <div className="presentation-image">
-                  <LottieWrapper animationData={"https://assets2.lottiefiles.com/packages/lf20_ssmuatywSV.json"} />
+                  <LottieWrapper animationData={animationdata} />
                 </div>
               </div>
             </div>

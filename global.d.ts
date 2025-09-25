@@ -14,4 +14,6 @@ declare global {
   }
 }
 
+declare module "bootstrap";
+
 export {};
