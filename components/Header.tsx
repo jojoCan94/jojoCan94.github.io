@@ -56,7 +56,7 @@ const Header = (): JSX.Element => {
     <header id="header" className="header-main">
       <nav className="navbar navbar-expand-md navbar-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand fw-semibold" href="#">
             {brandTitle}
           </a>
           <button
