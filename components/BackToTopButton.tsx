@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
 
-export default function BackToTopButton() {
-  const [isVisible, setIsVisible] = useState(false);
+const BackToTopButton = (): JSX.Element => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const offset =
+        window.pageYOffset ??
+        document.documentElement?.scrollTop ??
+        document.body?.scrollTop ??
+        0;
       setIsVisible(offset > 20);
     };
 
@@ -31,4 +35,6 @@ export default function BackToTopButton() {
       ☝️
     </button>
   );
-}
+};
+
+export default BackToTopButton;

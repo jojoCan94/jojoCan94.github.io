@@ -1,4 +1,4 @@
-export default function Projects() {
+const Projects = (): JSX.Element => {
   return (
     <section className="projects-section">
       <h1>Projects</h1>
@@ -24,4 +24,6 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+};
+
+export default Projects;

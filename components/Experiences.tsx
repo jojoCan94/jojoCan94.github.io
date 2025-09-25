@@ -1,4 +1,4 @@
-export default function Experiences() {
+const Experiences = (): JSX.Element => {
   return (
     <>
       <h1>Experiences</h1>
@@ -58,4 +58,6 @@ export default function Experiences() {
       </div>
     </>
   );
-}
+};
+
+export default Experiences;

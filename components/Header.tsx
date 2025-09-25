@@ -1,11 +1,17 @@
-const NAV_LINKS = [
+type NavLink = {
+  href: string;
+  icon: string;
+  label: string;
+};
+
+const NAV_LINKS: NavLink[] = [
   { href: '#skills', icon: 'fas fa-code', label: 'Skills' },
   { href: '#experiences', icon: 'fas fa-briefcase', label: 'Works' },
   { href: '#projects', icon: 'fas fa-laptop-code', label: 'Projects' },
   { href: '#contact-me', icon: 'fas fa-envelope', label: 'Contacts' },
 ];
 
-export default function Header() {
+const Header = (): JSX.Element => {
   return (
     <header id="header" className="header-main">
       <nav className="navbar navbar-expand-md navbar-dark">
@@ -39,4 +45,6 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+};
+
+export default Header;

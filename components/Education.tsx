@@ -1,4 +1,4 @@
-export default function Education() {
+const Education = (): JSX.Element => {
   return (
     <section className="education-section text-white">
       <h1 style={{ marginTop: '4rem', marginBottom: '4rem' }}>EDUCATION</h1>
@@ -22,4 +22,6 @@ export default function Education() {
       </div>
     </section>
   );
-}
+};
+
+export default Education;

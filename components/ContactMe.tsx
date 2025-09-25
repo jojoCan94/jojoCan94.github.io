@@ -1,4 +1,4 @@
-export default function ContactMe() {
+const ContactMe = (): JSX.Element => {
   return (
     <>
       <h1>Reach out to me!</h1>
@@ -42,4 +42,6 @@ export default function ContactMe() {
       </div>
     </>
   );
-}
+};
+
+export default ContactMe;

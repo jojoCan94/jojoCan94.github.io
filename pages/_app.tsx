@@ -1,3 +1,4 @@
+import type { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
@@ -10,9 +11,9 @@ import '../styles/projects.css';
 import '../styles/reachMe.css';
 import '../styles/backToTop.css';
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
-    import('bootstrap/dist/js/bootstrap.bundle.min.js');
+    void import('bootstrap/dist/js/bootstrap.bundle.min.js');
   }, []);
 
   return <Component {...pageProps} />;

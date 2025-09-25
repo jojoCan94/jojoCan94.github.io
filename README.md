@@ -1,7 +1,7 @@
 # Portfolio
 
-This repository contains the Next.js implementation of my personal portfolio website. The layout and content mirror the
-original static site while taking advantage of the React-based tooling offered by Next.js.
+This repository contains the Next.js + TypeScript implementation of my personal portfolio website. The layout and
+content mirror the original static site while taking advantage of the React-based tooling offered by Next.js.
 
 ## Getting started
 

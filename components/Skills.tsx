@@ -1,4 +1,4 @@
-export default function Skills() {
+const Skills = (): JSX.Element => {
   return (
     <>
       <h1 className="skills-title col-md-12">What I Do</h1>
@@ -53,4 +53,6 @@ export default function Skills() {
       </p>
     </>
   );
-}
+};
+
+export default Skills;

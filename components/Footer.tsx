@@ -1,4 +1,4 @@
-export default function Footer() {
+const Footer = (): JSX.Element => {
   return (
     <footer className="footer">
       <div className="container">
@@ -12,4 +12,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

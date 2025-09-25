@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
+import type { NextPage } from 'next';
 import Script from 'next/script';
+import { useEffect } from 'react';
 import BackToTopButton from '../components/BackToTopButton';
 import ContactMe from '../components/ContactMe';
 import Education from '../components/Education';
@@ -13,9 +14,9 @@ import Skills from '../components/Skills';
 
 const LOTTIE_PLAYER_SELECTOR = '#firstLottie';
 
-export default function Home() {
+const Home: NextPage = () => {
   useEffect(() => {
-    let intervalId;
+    let intervalId: number | undefined;
 
     const initializeLottie = () => {
       if (typeof window === 'undefined') {
@@ -51,7 +52,7 @@ export default function Home() {
     }
 
     return () => {
-      if (intervalId) {
+      if (intervalId !== undefined) {
         window.clearInterval(intervalId);
       }
     };
@@ -131,4 +132,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

@@ -1,4 +1,4 @@
-export default function Greeting() {
+const Greeting = (): JSX.Element => {
   return (
     <div className="greeting-main text-white">
       <div className="row flex-lg-row flex-column justify-content-lg-start justify-content-center">
@@ -65,4 +65,6 @@ export default function Greeting() {
       </div>
     </div>
   );
-}
+};
+
+export default Greeting;

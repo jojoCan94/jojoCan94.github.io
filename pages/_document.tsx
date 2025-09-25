@@ -1,12 +1,12 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-export default function Document() {
+export default function Document(): JSX.Element {
   return (
     <Html lang="en">
       <Head>
         <link rel="shortcut icon" href="#" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Roboto+Slab&display=swap"
           rel="stylesheet"
