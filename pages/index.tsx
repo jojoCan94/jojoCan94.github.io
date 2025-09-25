@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import type { GetStaticProps, NextPage } from 'next';
 import Script from 'next/script';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import BackToTopButton from '../components/BackToTopButton';
 import ContactMe from '../components/ContactMe';
 import Education from '../components/Education';
