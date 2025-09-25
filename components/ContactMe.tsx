@@ -9,10 +9,10 @@ const ContactMe = (): JSX.Element => {
 
       <div className="reach-out-card-left col-md-8">
         <p className="blog-subtitle">DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL.</p>
-        <h4>"Software Developer | Still Finding 💭 "</h4>
+        <h4>Software Developer | Always Learning 💭</h4>
         <p>
-          I currently work for a company as a frontend developer on ecommerce projects and I'm following 3 courses on
-          udemy: React native, Nextjs framework, nodejs.
+          I currently craft frontend experiences for ecommerce and SaaS products while continuously studying React
+          Native, Next.js and Node.js to broaden my toolkit.
         </p>
         <svg viewBox="-0.5 -2 20 19" version="1.1" width="22" height="16" aria-hidden="true" stroke="currentColor">
           <path

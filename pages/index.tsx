@@ -64,8 +64,29 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Jonathan Cannizzaro</title>
+        <title>Jonathan Cannizzaro | Frontend Developer Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Portfolio di Jonathan Cannizzaro, Frontend Developer specializzato in React, TypeScript e interfacce accessibili."
+        />
+        <meta
+          name="keywords"
+          content="Jonathan Cannizzaro, Frontend Developer, React, TypeScript, Portfolio, Web Accessibility"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Jonathan Cannizzaro | Frontend Developer" />
+        <meta
+          property="og:description"
+          content="Scopri esperienze, progetti e competenze di Jonathan Cannizzaro, sviluppatore frontend con focus su React e UX."
+        />
+        <meta property="og:url" content="https://jojoCan94.github.io" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:title" content="Jonathan Cannizzaro | Frontend Developer" />
+        <meta
+          property="twitter:description"
+          content="Portfolio professionale di Jonathan Cannizzaro con progetti, esperienze lavorative e contatti."
+        />
       </Head>
       <Script
         src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
