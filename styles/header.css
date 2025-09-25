@@ -39,16 +39,14 @@
     width: 10rem;
   }
 
-  /* Cambia il colore dell'icona del menu a comparsa in bianco */
   .navbar-toggler-icon {
-    background-image: url("./assets/not-svg-icons/menu-icon.png");
-    background-color: white;
+    background-image: url("/assets/not-svg-icons/menu-icon.png");
+    background-color: var(--light-black);
     background-repeat: no-repeat;
     width: 25px;
     height: 25px;
   }
 
-  /* Centralizza gli elementi del menu dropdown di Bootstrap */
   .navItems {
     display: flex;
     align-items: center;

@@ -3,17 +3,18 @@
 }
 
 .card {
-  background: #07182e;
+  background: #07182e !important;
   display: flex;
   place-content: center;
   place-items: center;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 20px !important;
   margin: 0 auto;
 }
 
 .education-card {
   z-index: 1;
+  color: white;
 }
 
 .card h2 {
@@ -52,12 +53,11 @@
 
 @media screen and (min-width: 992px) {
   .card {
-    max-width: 800px; /* larghezza massima della card */
-    margin: 0 auto; /* centra la card orizzontalmente */
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 
-/* Stile per dispositivi mobili */
 @media screen and (max-width: 767px) {
   .education-section h1 {
     text-align: center;
@@ -80,14 +80,13 @@
   }
 }
 
-/* Stile per schermi più grandi */
 @media screen and (min-width: 768px) {
   .education-card {
     text-align: left;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem; /* aggiunto il padding */
+    padding: 3rem;
   }
 
   .education-card img {

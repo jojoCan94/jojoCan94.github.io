@@ -1,0 +1,14 @@
+.projects-section h1 {
+  color: white;
+  font-size: calc(1.625rem + 2vw);
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  background-color: #07182e;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 20px #284893;
+}
