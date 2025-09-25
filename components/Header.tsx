@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslations } from '../lib/i18n';
 import { SUPPORTED_LOCALES, type Locale } from '../lib/messages';
+import { useEffect, useState } from 'react';
 
 type NavLinkKey = 'skills' | 'experiences' | 'projects' | 'contacts';
 
@@ -21,17 +22,42 @@ const NAV_LINKS: NavLink[] = [
 const Header = (): JSX.Element => {
   const router = useRouter();
   const { asPath, locale, locales } = router;
-  const { brand, links, language } = useTranslations('Header');
+  const { brand, brandMobile, links, language } = useTranslations('Header');
+  const [brandTitle, setBrandTitle] = useState(brand);
   const availableLocales = (locales ?? SUPPORTED_LOCALES).filter((availableLocale): availableLocale is Locale =>
     SUPPORTED_LOCALES.includes(availableLocale as Locale),
   );
+
+    useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+    const updateTitle = (matches: boolean) => {
+      setBrandTitle(matches ? brandMobile : brand);
+    };
+
+    updateTitle(mediaQuery.matches);
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      updateTitle(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, [brand, brandMobile]);
 
   return (
     <header id="header" className="header-main">
       <nav className="navbar navbar-expand-md navbar-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            {brand}
+            {brandTitle}
           </a>
           <button
             className="navbar-toggler"
