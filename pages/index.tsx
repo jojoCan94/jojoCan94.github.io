@@ -20,32 +20,7 @@ import animationdata from '../public/assets/lf20_ssmuatywSV.json';
 const LOTTIE_PLAYER_SELECTOR = '#firstLottie';
 
 const Home: NextPage = () => {
-  const { title, titleMobile, description } = useTranslations('Seo');
-  const [pageTitle, setPageTitle] = useState(title);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return undefined;
-    }
-
-    const mediaQuery = window.matchMedia('(max-width: 767px)');
-
-    const updateTitle = (matches: boolean) => {
-      setPageTitle(matches ? titleMobile : title);
-    };
-
-    updateTitle(mediaQuery.matches);
-
-    const handleChange = (event: MediaQueryListEvent) => {
-      updateTitle(event.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleChange);
-    };
-  }, [title, titleMobile]);
+  const { title, description } = useTranslations('Seo');
 
   useEffect(() => {
     let intervalId: number | undefined;
@@ -93,7 +68,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{pageTitle}</title>
+        <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={description} />
       </Head>

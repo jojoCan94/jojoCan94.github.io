@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslations } from '../lib/i18n';
 import { SUPPORTED_LOCALES, type Locale } from '../lib/messages';
+import { useEffect, useState } from 'react';
 
 type NavLinkKey = 'skills' | 'experiences' | 'projects' | 'contacts';
 
@@ -21,17 +22,42 @@ const NAV_LINKS: NavLink[] = [
 const Header = (): JSX.Element => {
   const router = useRouter();
   const { asPath, locale, locales } = router;
-  const { brand, links, language } = useTranslations('Header');
+  const { brand, brandMobile, links, language } = useTranslations('Header');
+  const [brandTitle, setBrandTitle] = useState(brand);
   const availableLocales = (locales ?? SUPPORTED_LOCALES).filter((availableLocale): availableLocale is Locale =>
     SUPPORTED_LOCALES.includes(availableLocale as Locale),
   );
+
+    useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+    const updateTitle = (matches: boolean) => {
+      setBrandTitle(matches ? brandMobile : brand);
+    };
+
+    updateTitle(mediaQuery.matches);
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      updateTitle(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, [brand, brandMobile]);
 
   return (
     <header id="header" className="header-main">
       <nav className="navbar navbar-expand-md navbar-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            {brand}
+          <a className="navbar-brand fw-semibold" href="#">
+            {brandTitle}
           </a>
           <button
             className="navbar-toggler"
@@ -53,26 +79,19 @@ const Header = (): JSX.Element => {
                   </a>
                 </li>
               ))}
-              <li className="nav-item d-flex align-items-center ms-md-3" key="locale-switcher">
-                <div className="btn-group btn-group-sm" role="group" aria-label="Language switcher">
-                  {availableLocales.map((availableLocale) => {
-                    const isActive = availableLocale === locale;
-                    const label = language[availableLocale] ?? availableLocale.toUpperCase();
-
-                    return (
-                      <Link
-                        key={availableLocale}
-                        href={asPath}
-                        locale={availableLocale}
-                        className={`btn ${isActive ? 'btn-light text-dark' : 'btn-outline-light'}`}
-                        aria-current={isActive ? 'true' : undefined}
-                      >
-                        {label}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </li>
+              {availableLocales.map((availableLocale) => (
+                <li className="nav-item" key={availableLocale}>
+                  <Link
+                    href={asPath}
+                    locale={availableLocale}
+                    className={`nav-link text-center text-xxl-h3 text-xl-h4 text-lg-h5 text-sm-h6 ${
+                      availableLocale === locale ? 'active' : ''
+                    }`}
+                  >
+                    {language[availableLocale] ?? availableLocale.toUpperCase()}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -1,11 +1,12 @@
 {
   "Seo": {
     "title": "Jonathan Cannizzaro",
-    "titleMobile": "J.C.",
+    "titleMobile": "J. C.",
     "description": "Portfolio of Jonathan Cannizzaro, a frontend software developer specialized in modern web technologies and user experience."
   },
   "Header": {
-    "brand": "JC Dev",
+    "brand": "Jonathan Cannizzaro",
+    "brandMobile": "JC Dev",
     "links": {
       "skills": "Skills",
       "experiences": "Works",
