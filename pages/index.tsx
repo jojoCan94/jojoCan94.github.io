@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Script from 'next/script';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import BackToTopButton from '../components/BackToTopButton';
 import ContactMe from '../components/ContactMe';
 import Education from '../components/Education';
@@ -12,12 +12,41 @@ import Header from '../components/Header';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import LottieWrapper from '../components/LottieWrapper';
+import { useTranslations } from '../lib/i18n';
+import { DEFAULT_LOCALE, loadMessages } from '../lib/messages';
 
 import animationdata from '../public/assets/lf20_ssmuatywSV.json';
 
 const LOTTIE_PLAYER_SELECTOR = '#firstLottie';
 
 const Home: NextPage = () => {
+  const { title, titleMobile, description } = useTranslations('Seo');
+  const [pageTitle, setPageTitle] = useState(title);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+    const updateTitle = (matches: boolean) => {
+      setPageTitle(matches ? titleMobile : title);
+    };
+
+    updateTitle(mediaQuery.matches);
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      updateTitle(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, [title, titleMobile]);
+
   useEffect(() => {
     let intervalId: number | undefined;
 
@@ -64,8 +93,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Jonathan Cannizzaro</title>
+        <title>{pageTitle}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={description} />
       </Head>
       <Script
         src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
@@ -134,3 +164,14 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const resolvedLocale = locale ?? DEFAULT_LOCALE;
+  const messages = await loadMessages(resolvedLocale);
+
+  return {
+    props: {
+      messages,
+    },
+  };
+};

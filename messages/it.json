@@ -1,0 +1,97 @@
+{
+  "Seo": {
+    "title": "Jonathan Cannizzaro",
+    "titleMobile": "J.C.",
+    "description": "Portfolio di Jonathan Cannizzaro, sviluppatore frontend specializzato in tecnologie web moderne e user experience."
+  },
+  "Header": {
+    "brand": "JC Dev",
+    "links": {
+      "skills": "Competenze",
+      "experiences": "Esperienze",
+      "projects": "Progetti",
+      "contacts": "Contatti"
+    },
+    "language": {
+      "en": "Inglese",
+      "it": "Italiano"
+    }
+  },
+  "Greeting": {
+    "title": "Ciao a tutti, sono Jonathan",
+    "intro": "Sono uno Sviluppatore Frontend 🚀 con esperienza in JavaScript, React.js, Node.js e in molte altre librerie e framework. Realizzo interfacce intuitive e performanti per offrire la migliore esperienza possibile.",
+    "skills": "Le mie competenze includono sviluppo web responsive e accessibilità. Rimango aggiornato sulle ultime tecnologie e tendenze del frontend, cercando sempre nuove sfide per migliorarmi.",
+    "resumeCta": "SCOPRI IL MIO CV",
+    "resumeUrl": "http://drive.google.com/file/d/1eavvNPP9TE-ALrtxx7IPc1vQp0Lwonwg/view?usp=sharing",
+    "contactCta": "CONTATTAMI",
+    "contactEmail": "jojo.can.94@gmail.com"
+  },
+  "Skills": {
+    "title": "Cosa faccio",
+    "intro": "Sono incurabilmente curioso verso le tecnologie front-end e back-end, ma la mia vera passione resta il frontend.",
+    "highlight1": "⚡ Sviluppo interfacce utente altamente interattive per applicazioni web e mobile.",
+    "highlight2": "⚡ Progressive Web App (PWA) con stack tradizionali e SPA.",
+    "highlight3": "⚡ Integrazione di servizi di terze parti come Firebase/AWS/Digital Ocean.",
+    "highlight4": "⚡ Mi impegno a ottimizzare accessibilità e performance attraverso best practice e standard."
+  },
+  "Education": {
+    "title": "Formazione",
+    "card": {
+      "institution": "Alma Mater Studiorum – Università di Bologna",
+      "course": "Scienze Informatiche",
+      "period": "2019 - 2021",
+      "description": [
+        "Ho completato due anni del corso di laurea triennale in Scienze Informatiche all'Università di Bologna, acquisendo solide basi in programmazione, sicurezza informatica e lavoro di squadra attraverso progetti di gruppo.",
+        "Anche se ho concluso solo due anni di studi, l'esperienza all'Università di Bologna è stata una grande opportunità di crescita personale e professionale."
+      ]
+    }
+  },
+  "Experiences": {
+    "title": "Esperienze",
+    "cards": {
+      "syscons": {
+        "role": "Frontend Developer",
+        "company": "Syscons Interactive",
+        "location": "Via Francesco Restelli, 5, Milano, Italia",
+        "description": "Ho lavorato su prodotti interni dell'azienda specializzandomi in HTML, CSS, React + Redux + Saga + TypeScript, gestione di branch e repository su GitLab, Google Cloud, API REST, test TDD & E2E e processi agili su Jira."
+      },
+      "nexum": {
+        "role": "Cloud Frontend Developer",
+        "company": "Nexum-ai",
+        "location": "Via Rodi, 49 - 00195 Roma, Italia",
+        "description": "Mi sono occupato di prodotti interni dell'azienda con focus su HTML, CSS, React + Redux + Saga + TypeScript, gestione di branch e repository su GitLab, Google Cloud, API REST, test TDD & E2E e metodologie agili su Jira."
+      }
+    }
+  },
+  "Projects": {
+    "title": "Progetti",
+    "cards": {
+      "portfolio": {
+        "title": "Portfolio personale",
+        "description": "Un sito semplice per presentare il mio lavoro e le mie competenze."
+      },
+      "todo": {
+        "title": "Todo App",
+        "description": "Applicazione web per gestire le attività quotidiane realizzata con React."
+      },
+      "api": {
+        "title": "Esperimento API",
+        "description": "Un piccolo progetto per esplorare l'integrazione di API REST con Node.js."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Scrivimi!",
+    "subtitle": "VUOI PARLARE DI UN PROGETTO O SEMPLICEMENTE SALUTARE? LA MIA INBOX È APERTA A TUTTI.",
+    "quote": "\"Software Developer | Sempre alla ricerca 💭 \"",
+    "description": "Lavoro come frontend developer su progetti e-commerce e sto seguendo tre corsi su Udemy: React Native, framework Next.js e Node.js.",
+    "location": "Bologna, Italia"
+  },
+  "Footer": {
+    "crafted": "✍️ con ❤️ da Me",
+    "themeCredit": "Tema ispirato da"
+  },
+  "BackToTop": {
+    "title": "Torna in cima"
+  }
+}

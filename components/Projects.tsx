@@ -1,26 +1,24 @@
+import { useTranslations } from '../lib/i18n';
+
+type ProjectKey = 'portfolio' | 'todo' | 'api';
+
+const PROJECTS: ProjectKey[] = ['portfolio', 'todo', 'api'];
+
 const Projects = (): JSX.Element => {
+  const { title, cards } = useTranslations('Projects');
+
   return (
     <section className="projects-section">
-      <h1>Projects</h1>
+      <h1>{title}</h1>
       <div className="row">
-        <div className="col-md-4 mb-3">
-          <div className="project-card h-100">
-            <h3>Personal Portfolio</h3>
-            <p>A simple website built to showcase my work and skills.</p>
+        {PROJECTS.map((projectKey) => (
+          <div className="col-md-4 mb-3" key={projectKey}>
+            <div className="project-card h-100">
+              <h3>{cards[projectKey].title}</h3>
+              <p>{cards[projectKey].description}</p>
+            </div>
           </div>
-        </div>
-        <div className="col-md-4 mb-3">
-          <div className="project-card h-100">
-            <h3>Todo App</h3>
-            <p>Web application for managing daily tasks using React.</p>
-          </div>
-        </div>
-        <div className="col-md-4 mb-3">
-          <div className="project-card h-100">
-            <h3>API Experiment</h3>
-            <p>Small project to explore REST API integration with Node.js.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
