@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useTranslations } from '../lib/i18n';
 
 const BackToTopButton = (): JSX.Element => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const { title } = useTranslations('BackToTop');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +30,7 @@ const BackToTopButton = (): JSX.Element => {
   return (
     <button
       id="goToTopButton"
-      title="Go to top"
+      title={title}
       onClick={scrollToTop}
       style={{ display: isVisible ? 'flex' : 'none' }}
     >

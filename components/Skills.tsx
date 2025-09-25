@@ -1,11 +1,13 @@
+import { useTranslations } from '../lib/i18n';
+
 const Skills = (): JSX.Element => {
+  const { title, intro, highlight1, highlight2, highlight3, highlight4 } = useTranslations('Skills');
+
   return (
     <>
-      <h1 className="skills-title col-md-12">What I Do</h1>
+      <h1 className="skills-title col-md-12">{title}</h1>
 
-      <p className="skills-paragraph">
-        I am incurably curious about both front-end and back-end technologies, but my absolute passion is front-end.
-      </p>
+      <p className="skills-paragraph">{intro}</p>
 
       <div className="mt-4">
         <ul className="d-flex justify-content-around p-3 skills-icon" style={{ listStyleType: 'none' }}>
@@ -39,18 +41,13 @@ const Skills = (): JSX.Element => {
         </ul>
       </div>
 
-      <p className="skills-explained mt-4">
-        ⚡ I develop highly interactive user interfaces for your web and mobile applications.
-      </p>
+      <p className="skills-explained mt-4">{highlight1}</p>
 
-      <p className="skills-explained">⚡ Progressive Web Applications (PWA) in normal and SPA stacks.</p>
+      <p className="skills-explained">{highlight2}</p>
 
-      <p className="skills-explained">⚡ Integration of third-party services such as Firebase/AWS/Digital Ocean.</p>
+      <p className="skills-explained">{highlight3}</p>
 
-      <p className="skills-explained">
-        ⚡ I also strive to optimize web accessibility and performance through the use of best practices and
-        standards.
-      </p>
+      <p className="skills-explained">{highlight4}</p>
     </>
   );
 };
