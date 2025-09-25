@@ -12,6 +12,11 @@ type NavLink = {
   labelKey: NavLinkKey;
 };
 
+const LANGUAGE_FLAGS: Record<Locale, string> = {
+  en: '🇬🇧',
+  it: '🇮🇹',
+};
+
 const NAV_LINKS: NavLink[] = [
   { href: '#skills', icon: 'fas fa-code', labelKey: 'skills' },
   { href: '#experiences', icon: 'fas fa-briefcase', labelKey: 'experiences' },
@@ -28,7 +33,7 @@ const Header = (): JSX.Element => {
     SUPPORTED_LOCALES.includes(availableLocale as Locale),
   );
 
-    useEffect(() => {
+  useEffect(() => {
     if (typeof window === 'undefined') {
       return undefined;
     }
@@ -79,19 +84,25 @@ const Header = (): JSX.Element => {
                   </a>
                 </li>
               ))}
-              {availableLocales.map((availableLocale) => (
-                <li className="nav-item" key={availableLocale}>
-                  <Link
-                    href={asPath}
-                    locale={availableLocale}
-                    className={`nav-link text-center text-xxl-h3 text-xl-h4 text-lg-h5 text-sm-h6 ${
-                      availableLocale === locale ? 'active' : ''
-                    }`}
-                  >
-                    {language[availableLocale] ?? availableLocale.toUpperCase()}
-                  </Link>
-                </li>
-              ))}
+              <li className="nav-item language-selector">
+                <div className="language-switcher" role="group" aria-label="Language selector">
+                  {availableLocales.map((availableLocale) => (
+                    <Link
+                      key={availableLocale}
+                      href={asPath}
+                      locale={availableLocale}
+                      className={`language-option ${availableLocale === locale ? 'active' : ''}`}
+                    >
+                      <span aria-hidden="true" className="language-flag">
+                        {LANGUAGE_FLAGS[availableLocale] ?? '🌐'}
+                      </span>
+                      <span className="language-label">
+                        {language[availableLocale] ?? availableLocale.toUpperCase()}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </li>
             </ul>
           </div>
         </div>
