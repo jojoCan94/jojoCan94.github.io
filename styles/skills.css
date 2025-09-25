@@ -11,7 +11,8 @@
   margin-bottom: 2rem;
 }
 
-.skills-icons {
+.skills-icons,
+.skills-icon {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,7 +20,8 @@
   margin: 0;
 }
 
-.skills-icons li {
+.skills-icons li,
+.skills-icon li {
   margin-right: 10px;
 }
 
@@ -43,8 +45,6 @@
 .skills-explained {
   text-align: justify;
 }
-
-/* End skills section */
 
 @media only screen and (max-width: 1399px) {
   .skills-paragraph {

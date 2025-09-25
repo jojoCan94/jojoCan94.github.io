@@ -1,7 +1,5 @@
 :root {
-  /* spazi tra le section */
   --small-font: 8rem;
-  /* Dimensioni del font */
   --mega: 40px;
   --big: 24px;
   --medium: 20px;
@@ -9,7 +7,6 @@
   --mini: 16px;
 }
 
-/* Work section */
 .work-section {
   display: flex;
   justify-content: center;
@@ -70,9 +67,6 @@
   text-align: center;
 }
 
-/* Styling for experience cards */
-
-/* Flip card container */
 .flip-card {
   padding: 1rem;
   background-color: transparent;
@@ -82,7 +76,6 @@
   font-family: sans-serif;
 }
 
-/* Title */
 .title {
   font-size: 1.5em;
   font-weight: 900;
@@ -90,7 +83,6 @@
   margin: 0;
 }
 
-/* Flip card inner container */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -100,12 +92,10 @@
   transform-style: preserve-3d;
 }
 
-/* Flip card hover animation */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Flip card front and back */
 .flip-card-front,
 .flip-card-back {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -122,7 +112,6 @@
   border-radius: 1rem;
 }
 
-/* Flip card front */
 .flip-card-front {
   background: linear-gradient(
     120deg,
@@ -134,7 +123,6 @@
   color: rgb(176, 80, 255);
 }
 
-/* Flip card back */
 .flip-card-back {
   background: linear-gradient(
     120deg,
@@ -147,7 +135,6 @@
   transform: rotateY(180deg);
 }
 
-/* Flip card front and back for Nexum experience */
 .flip-card-front-nex,
 .flip-card-back-nex {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -164,7 +151,6 @@
   border-radius: 1rem;
 }
 
-/* Flip card front for Nexum experience */
 .flip-card-front-nex {
   background: linear-gradient(
     120deg,
@@ -176,7 +162,6 @@
   color: rgb(83, 80, 255);
 }
 
-/* Flip card back for Nexum experience */
 .flip-card-back-nex {
   background: linear-gradient(
     120deg,
@@ -249,7 +234,6 @@
 
 @media only screen and (max-width: 767px) {
   :root {
-    /* Dimensioni del font */
     --mega: 22px;
     --big: 18px;
     --medium: 16px;

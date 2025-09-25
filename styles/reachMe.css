@@ -1,4 +1,3 @@
-/* Reach out me section */
 .reach-out-card {
   display: revert;
   margin: 0;
@@ -48,7 +47,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  /* Education section */
   .reach-out-card {
     display: flex;
     margin: 0;

@@ -16,6 +16,15 @@
   --mini: 20px;
 }
 
+html,
+body {
+  background-color: var(--light-black);
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
 .main-content {
   margin: 1rem;
   background-color: var(--light-black);
@@ -29,7 +38,7 @@
 
 .header {
   min-height: 50px;
-  color: white;
+  color: var(--white);
 }
 
 .navbar-toggler .active {
@@ -60,7 +69,7 @@
   border-radius: 7px;
 }
 
-.main-content {
+.main-content article {
   flex: 1;
 }
 
@@ -96,16 +105,15 @@
   border-top: rgba(0, 0, 0, 0.45) solid 1px;
 }
 
-/* footer section */
 footer {
   min-height: 150px;
-  background: PapayaWhip;
+  background: papayawhip;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: var(--light-black);
-  color: white;
+  color: var(--white);
   height: 10rem;
 }
 
@@ -121,7 +129,6 @@ footer {
   }
 }
 
-/* Tablet */
 @media only screen and (max-width: 767px) {
   .social-media-div {
     display: flex;
@@ -147,7 +154,4 @@ footer {
   .google img {
     filter: invert(37%) sepia(36%) saturate(2251%) hue-rotate(331deg) brightness(94%) contrast(104%);
   }
-}
-/* little Phones */
-@media only screen and (max-width: 400px) {
 }

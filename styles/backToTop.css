@@ -19,15 +19,16 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: pulse 2s ease-in-out infinite;
   transition: all 0.2s ease-in-out;
+  z-index: 1000;
 }
 
-.goToTopButton:hover {
+#goToTopButton:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-.goToTopButton i {
+#goToTopButton i {
   color: #ffffff;
   font-size: 24px;
 }
