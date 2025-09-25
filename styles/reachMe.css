@@ -1,0 +1,81 @@
+.reach-out-card {
+  display: revert;
+  margin: 0;
+  line-height: normal;
+  color: white;
+  text-align: left;
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+}
+
+.reach-out-card h1 {
+  font-size: calc(1.625rem + 2vw);
+}
+
+.profile-photo {
+  width: 250px;
+}
+
+.blog-subtitle {
+  font-weight: 500;
+  color: #868e96;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.reach-out-card-right {
+  float: right;
+}
+
+@media only screen and (max-width: 991px) {
+  .reach-out-card {
+    display: revert;
+    margin: 0;
+    line-height: normal;
+    color: white;
+    padding-left: 0;
+  }
+
+  .reach-out-card h1 {
+    font-size: 4rem;
+  }
+
+  .profile-photo {
+    margin: 2rem;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .reach-out-card {
+    display: flex;
+    margin: 0;
+    line-height: normal;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .reach-out-card h1 {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+
+  .reach-out-card,
+  .blog-subtitle {
+    text-align: center;
+  }
+
+  .blog-subtitle {
+    font-weight: 500;
+    color: #868e96;
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .profile-photo {
+    margin: 2rem;
+    width: 200px;
+  }
+}

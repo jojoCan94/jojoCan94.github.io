@@ -1,0 +1,157 @@
+:root {
+  /* Color palette */
+  --light-black: #171c28;
+  --smoky-black: #0c0c08ff;
+  --old-lace: #f5f1e3ff;
+  --white: #ffffffff;
+  /* Fonts */
+  font-family: "Bebas Neue", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
+  /* Font size */
+  --mega: 155px;
+  --big: 37px;
+  --medium: 30px;
+  --small: 25px;
+  --mini: 20px;
+}
+
+html,
+body {
+  background-color: var(--light-black);
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+.main-content {
+  padding: 1rem;
+  background-color: var(--light-black);
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  margin-bottom: 4rem;
+}
+
+.header {
+  min-height: 50px;
+  color: var(--white);
+}
+
+.navbar-toggler .active {
+  text-decoration: none;
+  background-color: #171c28;
+}
+
+.name-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbarNav {
+  background-color: #171c28;
+}
+
+.nav-item {
+  padding: 5px;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.nav-hover-item:hover {
+  background-color: rgba(16, 83, 227, 0.55);
+  border-radius: 7px;
+}
+
+.main-content article {
+  flex: 1;
+}
+
+.social-media-div {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.social-media-icons img {
+  width: 40px;
+}
+
+.github img {
+  background-color: #d5d5d5;
+  border-radius: 20px;
+  padding: 0.6rem;
+  filter: invert(100%);
+}
+
+.google img {
+  filter: invert(37%) sepia(36%) saturate(2251%) hue-rotate(331deg) brightness(94%) contrast(104%);
+}
+
+.footer {
+  border-top: rgba(0, 0, 0, 0.45) solid 1px;
+}
+
+footer {
+  min-height: 150px;
+  background: papayawhip;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--light-black);
+  color: var(--white);
+  height: 10rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-link {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .nav-link {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .social-media-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-media-div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    text-decoration: none;
+  }
+
+  .github img {
+    background-color: #d5d5d5;
+    border-radius: 20px;
+    padding: 0.6rem;
+    filter: invert(100%);
+  }
+
+  .google img {
+    filter: invert(37%) sepia(36%) saturate(2251%) hue-rotate(331deg) brightness(94%) contrast(104%);
+  }
+}

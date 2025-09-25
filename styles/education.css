@@ -1,0 +1,100 @@
+.education-section h1 {
+  font-size: calc(1.625rem + 2vw);
+}
+
+.card {
+  background: #07182e !important;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px !important;
+  margin: 0 auto;
+}
+
+.education-card {
+  z-index: 1;
+  color: white;
+}
+
+.card h2 {
+  color: white;
+  font-size: 2em;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(227, 1, 1));
+  height: 200%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+  border-radius: 20px;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 5px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .education-section h1 {
+    text-align: center;
+  }
+  .education-card {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .education-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .education-card img {
+    padding: 1rem;
+  }
+
+  .education-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .education-card {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .education-card img {
+    width: 100px;
+    flex-shrink: 0;
+  }
+}
+
+.card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+}
