@@ -1,62 +1,66 @@
+import { useTranslations } from '../lib/i18n';
+
+type ExperienceKey = 'syscons' | 'nexum';
+
+type ExperienceCard = {
+  key: ExperienceKey;
+  imageSrc: string;
+  imageAlt: string;
+  frontClassName: string;
+  backClassName: string;
+  imageWidth: number;
+};
+
+const EXPERIENCE_CARDS: ExperienceCard[] = [
+  {
+    key: 'syscons',
+    imageSrc: '/assets/logo/work-logos/syscons-interactive.webp',
+    imageAlt: 'Syscons logo',
+    frontClassName: 'flip-card-front',
+    backClassName: 'flip-card-back',
+    imageWidth: 300,
+  },
+  {
+    key: 'nexum',
+    imageSrc: '/assets/logo/work-logos/nexum-logo.jpeg',
+    imageAlt: 'Nexum logo',
+    frontClassName: 'flip-card-front-nex',
+    backClassName: 'flip-card-back-nex',
+    imageWidth: 180,
+  },
+];
+
 const Experiences = (): JSX.Element => {
+  const { title, cards } = useTranslations('Experiences');
+
   return (
     <>
-      <h1>Experiences</h1>
+      <h1>{title}</h1>
 
       <div className="work-experience">
-        <div className="flip-card">
-          <div className="flip-card-inner">
-            <div className="flip-card-front">
-              <img
-                className="work-logo title"
-                src="/assets/logo/work-logos/syscons-interactive.webp"
-                alt="Syscons logo"
-                width="300"
-              />
-            </div>
-            <div className="flip-card-back">
-              <div className="card-info">
-                <div className="work-description">
-                  <h3>Frontend Developer</h3>
-                  <p className="work-job-title">Syscons Interactive</p>
-                  <p className="work-job-location">Via Francesco Restelli, 5, Milan, Italy</p>
-                  <p className="work-jod-desc">
-                    Here I worked on some internal products of the company and I specialized in HTML, CSS,
-                    React+Redux+saga+Typescript, branch and repo management on gitlab, google cloud, Api rest, TDD&e2e,
-                    jira platform(agile work)
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {EXPERIENCE_CARDS.map((card) => {
+          const translations = cards[card.key];
 
-        <div className="flip-card">
-          <div className="flip-card-inner">
-            <div className="flip-card-front-nex">
-              <img
-                className="work-logo title rounded-circle"
-                src="/assets/logo/work-logos/nexum-logo.jpeg"
-                alt="Nexum logo"
-                width="180"
-              />
-            </div>
-            <div className="flip-card-back-nex">
-              <div className="card-info">
-                <div className="work-description">
-                  <h3>Cloud Frontend Developer</h3>
-                  <p className="work-job-title">Nexum-ai</p>
-                  <p className="work-job-location">Via Rodi, 49 - 00195 Rome, Italy</p>
-                  <p className="work-jod-desc">
-                    Here I worked on some internal products of the company and I specialize in HTML, CSS,
-                    React+Redux+saga+Typescript, branch and repo management on gitlab, google cloud, Api rest, TDD&e2e,
-                    jira platform(agile work)
-                  </p>
+          return (
+            <div className="flip-card" key={card.key}>
+              <div className="flip-card-inner">
+                <div className={card.frontClassName}>
+                  <img className="work-logo title" src={card.imageSrc} alt={card.imageAlt} width={card.imageWidth} />
+                </div>
+                <div className={card.backClassName}>
+                  <div className="card-info">
+                    <div className="work-description">
+                      <h3>{translations.role}</h3>
+                      <p className="work-job-title">{translations.company}</p>
+                      <p className="work-job-location">{translations.location}</p>
+                      <p className="work-jod-desc">{translations.description}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </>
   );

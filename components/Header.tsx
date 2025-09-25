@@ -1,23 +1,37 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslations } from '../lib/i18n';
+import { SUPPORTED_LOCALES, type Locale } from '../lib/messages';
+
+type NavLinkKey = 'skills' | 'experiences' | 'projects' | 'contacts';
+
 type NavLink = {
   href: string;
   icon: string;
-  label: string;
+  labelKey: NavLinkKey;
 };
 
 const NAV_LINKS: NavLink[] = [
-  { href: '#skills', icon: 'fas fa-code', label: 'Skills' },
-  { href: '#experiences', icon: 'fas fa-briefcase', label: 'Works' },
-  { href: '#projects', icon: 'fas fa-laptop-code', label: 'Projects' },
-  { href: '#contact-me', icon: 'fas fa-envelope', label: 'Contacts' },
+  { href: '#skills', icon: 'fas fa-code', labelKey: 'skills' },
+  { href: '#experiences', icon: 'fas fa-briefcase', labelKey: 'experiences' },
+  { href: '#projects', icon: 'fas fa-laptop-code', labelKey: 'projects' },
+  { href: '#contact-me', icon: 'fas fa-envelope', labelKey: 'contacts' },
 ];
 
 const Header = (): JSX.Element => {
+  const router = useRouter();
+  const { asPath, locale, locales } = router;
+  const { brand, links, language } = useTranslations('Header');
+  const availableLocales = (locales ?? SUPPORTED_LOCALES).filter((availableLocale): availableLocale is Locale =>
+    SUPPORTED_LOCALES.includes(availableLocale as Locale),
+  );
+
   return (
     <header id="header" className="header-main">
       <nav className="navbar navbar-expand-md navbar-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            JC Dev
+            {brand}
           </a>
           <button
             className="navbar-toggler"
@@ -35,8 +49,21 @@ const Header = (): JSX.Element => {
               {NAV_LINKS.map((link) => (
                 <li className="nav-item" key={link.href}>
                   <a className="nav-link text-center text-xxl-h3 text-xl-h4 text-lg-h5 text-sm-h6" href={link.href}>
-                    <i className={link.icon} /> {link.label}
+                    <i className={link.icon} /> {links[link.labelKey]}
                   </a>
+                </li>
+              ))}
+              {availableLocales.map((availableLocale) => (
+                <li className="nav-item" key={availableLocale}>
+                  <Link
+                    href={asPath}
+                    locale={availableLocale}
+                    className={`nav-link text-center text-xxl-h3 text-xl-h4 text-lg-h5 text-sm-h6 ${
+                      availableLocale === locale ? 'active' : ''
+                    }`}
+                  >
+                    {language[availableLocale] ?? availableLocale.toUpperCase()}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Script from 'next/script';
 import { useEffect } from 'react';
 import BackToTopButton from '../components/BackToTopButton';
@@ -12,12 +12,16 @@ import Header from '../components/Header';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import LottieWrapper from '../components/LottieWrapper';
+import { useTranslations } from '../lib/i18n';
+import { DEFAULT_LOCALE, loadMessages } from '../lib/messages';
 
 import animationdata from '../public/assets/lf20_ssmuatywSV.json';
 
 const LOTTIE_PLAYER_SELECTOR = '#firstLottie';
 
 const Home: NextPage = () => {
+  const { title, description } = useTranslations('Seo');
+
   useEffect(() => {
     let intervalId: number | undefined;
 
@@ -64,8 +68,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Jonathan Cannizzaro</title>
+        <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={description} />
       </Head>
       <Script
         src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
@@ -134,3 +139,14 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const resolvedLocale = locale ?? DEFAULT_LOCALE;
+  const messages = await loadMessages(resolvedLocale);
+
+  return {
+    props: {
+      messages,
+    },
+  };
+};
