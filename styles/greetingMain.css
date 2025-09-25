@@ -12,7 +12,20 @@
   transform: translateY(-5px);
 }
 
+.button-presentation {
+  display: flex;
+  gap: 30px;
+}
+
+.button-presentation a {
+  margin: 10px 0;
+}
+
 .btn-custom {
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   position: relative;
   border: none;
@@ -28,7 +41,6 @@
   border-radius: 30px;
   z-index: 1;
   font-size: 1rem;
-  margin: 10px;
 }
 
 .btn-custom:hover {
@@ -59,6 +71,10 @@
 }
 
 .btn-custom2 {
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   position: relative;
   border: none;
@@ -74,7 +90,6 @@
   border-radius: 30px;
   z-index: 1;
   font-size: 1rem;
-  margin: 10px;
 }
 
 .btn-custom2:hover {
@@ -135,6 +150,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
 
   .button-presentation a {
@@ -176,6 +192,7 @@
     transform: rotate(0deg);
   }
 }
+
 @keyframes ani2 {
   0% {
     background-position: 0%;
@@ -183,5 +200,25 @@
 
   100% {
     background-position: 400%;
+  }
+}
+
+/* ---- NUOVE REGOLE PER LE SEZIONI ---- */
+.section-spacing {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 576px) {
+  .section-spacing {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .section-spacing {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }

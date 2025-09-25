@@ -101,11 +101,11 @@ const Home: NextPage = () => {
       <div className="main-content">
         <Header />
         <article className="main-content">
-          <section id="greeting" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
+          <section id="greeting" className="section-spacing">
             <Greeting />
           </section>
 
-          <section className="row" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
+          <section className="row section-spacing">
             <div className="col-md-4">
               <div className="skills-image-div">
                 <div className="presentation-image">
@@ -120,31 +120,23 @@ const Home: NextPage = () => {
             </div>
           </section>
 
-          <section
-            id="education"
-            className="row education-section"
-            style={{ marginTop: '4rem', marginBottom: '4rem' }}
-          >
+          <section id="education" className="row education-section section-spacing">
             <Education />
           </section>
 
-          <section
-            id="experiences"
-            className="row work-section"
-            style={{ marginTop: '4rem', marginBottom: '4rem' }}
-          >
+          <section id="experiences" className="row work-section section-spacing">
             <Experiences />
           </section>
 
-          <section id="projects" className="row projects-section" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
+          <section id="projects" className="row projects-section section-spacing">
             <Projects />
           </section>
 
-          <section id="contact-me" className="row reach-out-card" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
+          <section id="contact-me" className="row reach-out-card section-spacing">
             <ContactMe />
           </section>
 
-          <div id="footer" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
+          <div id="footer" className="section-spacing">
             <Footer />
           </div>
         </article>
